@@ -1,0 +1,115 @@
+$color-primary: #007bff;
+$color-secondary: #6c757d;
+$color-success: #28a745;
+$color-danger: #dc3545;
+$color-warning: #ffc107;
+$color-info: #17a2b8;
+$color-light: #f8f9fa;
+$color-dark: #343a40;
+$color-white: #fff;
+
+$margin-xxs: 0.25rem; // 4px
+$margin-xs: 0.5rem; // 8px
+$margin-sm: 1rem; // 16px
+$margin-md: 1.75rem; // 24px
+$margin-lg: 2rem; // 32px
+$margin-xl: 3rem; // 48px
+$margin-xxl: 4rem; // 64px
+
+$border-radiou-xs: 4px;
+$border-radiou-sm: 8px;
+$border-radiou-md: 12px;
+$border-radiou-lg: 16px;
+$border-radiou-xl: 24px;
+$border-radiou-huge: 32px;
+
+$sizePhoneLG: 393px;
+$sizeTabletSm: 426px;
+$sizeTablet: 768px;
+$sizeDesktop: 1024px;
+$sizeDesktopLG: 1440px;
+$sizeDesktopXL: 1920px;
+
+$main-font-family: -apple-system, Roboto, sans-serif, serif;
+
+@mixin font-lg() {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 28px;
+  font-family: $main-font-family;
+}
+
+@mixin font-lg() {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: $main-font-family;
+}
+
+@mixin font-md() {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: $main-font-family;
+}
+
+@mixin font-sm() {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 19px;
+  font-family: $main-font-family;
+}
+
+@mixin font-xs() {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 11px;
+  line-height: 16px;
+  font-family: $main-font-family;
+}
+
+@mixin for-phone-only {
+  @media (max-width: 37.5rem) {
+    // 600px
+    @content;
+  }
+}
+
+@mixin for-tablet-sm-up {
+  @media (min-width: $sizeTabletSm) {
+    // 420px
+    @content;
+  }
+}
+
+@mixin for-tablet-up {
+  @media (min-width: $sizeTablet) {
+    // 768px
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: $sizeDesktop) {
+    // 1024px
+    @content;
+  }
+}
+
+@mixin for-desktopLG-up {
+  @media (min-width: $sizeDesktopLG) {
+    // 1440px
+    @content;
+  }
+}
+
+@mixin for-desktopXL-up {
+  @media (min-width: $sizeDesktopXL) {
+    // 1920px
+    @content;
+  }
+}

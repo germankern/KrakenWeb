@@ -13,7 +13,11 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "prepare": "husky install"
   },
   "dependencies": {
     "gatsby": "^5.8.0",
@@ -24,6 +28,7 @@
     "gatsby-source-contentful": "^8.8.0",
     "gatsby-source-filesystem": "^5.8.0",
     "gatsby-transformer-sharp": "^5.8.0",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.60.0"
@@ -32,6 +37,10 @@
     "@types/node": "^18.15.8",
     "@types/react": "^18.0.29",
     "@types/react-dom": "^18.0.11",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.8.0",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.7",
     "typescript": "^5.0.2"
   }
 }
