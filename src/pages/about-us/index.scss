@@ -1,0 +1,27 @@
+@import '../../styles/theme.scss';
+
+.about-us {
+  flex: 1;
+  background-color: $color-info;
+  .title {
+    @include font-lg();
+    text-align: center;
+  }
+  .member {
+    text-align: center;
+    max-width: 24rem;
+    max-height: 24rem;
+    background-color: $color-secondary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid $color-primary;
+    border-radius: $border-radiou-md;
+    margin: $margin-sm;
+    padding: $margin-sm;
+    h4 {
+      @include font-md();
+    }
+  }
+}
