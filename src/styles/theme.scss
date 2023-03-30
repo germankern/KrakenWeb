@@ -1,11 +1,11 @@
-$color-primary: #007bff;
+$color-primary: #00b0e9;
 $color-secondary: #6c757d;
 $color-success: #28a745;
 $color-danger: #dc3545;
 $color-warning: #ffc107;
 $color-info: #17a2b8;
 $color-light: #f8f9fa;
-$color-dark: #343a40;
+$color-dark: #000000;
 $color-white: #fff;
 
 $margin-xxs: 0.25rem; // 4px
@@ -30,46 +30,46 @@ $sizeDesktop: 1024px;
 $sizeDesktopLG: 1440px;
 $sizeDesktopXL: 1920px;
 
-$main-font-family: -apple-system, Roboto, sans-serif, serif;
+$main-font-family: 'Merriweather', serif;
 
 @mixin font-lg() {
+  font-family: $main-font-family;
   font-weight: 400;
   font-style: normal;
   font-size: 24px;
   line-height: 28px;
-  font-family: $main-font-family;
 }
 
 @mixin font-lg() {
+  font-family: $main-font-family;
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
   line-height: 28px;
-  font-family: $main-font-family;
 }
 
 @mixin font-md() {
+  font-family: $main-font-family;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
   line-height: 22px;
-  font-family: $main-font-family;
 }
 
 @mixin font-sm() {
+  font-family: $main-font-family;
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
   line-height: 19px;
-  font-family: $main-font-family;
 }
 
 @mixin font-xs() {
+  font-family: $main-font-family;
   font-weight: 400;
   font-style: normal;
   font-size: 11px;
   line-height: 16px;
-  font-family: $main-font-family;
 }
 
 @mixin for-phone-only {
