@@ -32,7 +32,7 @@ $sizeDesktopXL: 1920px;
 
 $main-font-family: 'Merriweather', serif;
 
-@mixin font-lg() {
+@mixin font-xl() {
   font-family: $main-font-family;
   font-weight: 400;
   font-style: normal;
@@ -71,7 +71,15 @@ $main-font-family: 'Merriweather', serif;
   font-size: 11px;
   line-height: 16px;
 }
-
+@mixin font-links() {
+  font-family: $main-font-family;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: none;
+  color: $color-white;
+}
 @mixin for-phone-only {
   @media (max-width: 37.5rem) {
     // 600px

@@ -1,19 +1,118 @@
 @import '../../styles/theme.scss';
 
 .footer {
-  background-color: $color-secondary;
+  background-color: $color-dark;
+  padding: $margin-xxl 0px;
   .innerContainer {
-    height: 8rem;
-    max-width: $sizeTablet;
+    max-height: 320px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     max-width: $sizeDesktop;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    .innerContainerLeft {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      padding: $margin-xs;
+      width: 270px;
+      a {
+        @include font-links();
+        margin-bottom: $margin-sm;
+      }
+    }
+    .innerContainerCenter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .innerContainerRight {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      padding: $margin-xs;
+      width: 270px;
+      a {
+        @include font-links();
+        margin-bottom: $margin-sm;
+      }
+      .containerNetworks {
+        margin-top: $margin-lg;
+        img {
+          margin-left: $margin-sm;
+        }
+      }
+    }
   }
-
-  .text {
-    @include font-lg();
+}
+//                      hasta   768px
+@media screen and (max-width: $sizeTablet) {
+  .footer {
+    padding: $margin-lg 0px;
+    .innerContainer {
+      .innerContainerLeft {
+        width: 200px;
+        a {
+          @include font-sm();
+          font-weight: 600;
+        }
+      }
+      .innerContainerCenter {
+        align-items: flex-start;
+        padding-bottom: $margin-lg;
+        img {
+          max-width: 85%;
+        }
+      }
+      .innerContainerRight {
+        width: 200px;
+        a {
+          @include font-sm();
+          font-weight: 600;
+        }
+        .containerNetworks {
+          margin-top: $margin-lg;
+          .mail {
+            margin-left: 0px;
+          }
+          img {
+            margin-left: $border-radiou-md;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 650px) {
+  .footer {
+    .innerContainer {
+      flex-direction: column;
+      max-height: 100%;
+      .innerContainerLeft {
+        width: auto;
+        padding: $margin-sm;
+      }
+      .innerContainerRight {
+        width: auto;
+        a {
+          margin: $margin-xs auto;
+        }
+        .containerNetworks {
+          img,
+          .mail {
+            width: $margin-md;
+            margin: $border-radiou-md;
+          }
+        }
+      }
+    }
   }
 }
