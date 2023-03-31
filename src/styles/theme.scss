@@ -16,6 +16,10 @@ $margin-lg: 2rem; // 32px
 $margin-xl: 3rem; // 48px
 $margin-xxl: 4rem; // 64px
 
+$column-width-lg: 20rem; //320px
+$column-width-md: 17rem; //272px
+$column-width-sm: 12.5rem; //200px
+
 $border-radiou-xs: 4px;
 $border-radiou-sm: 8px;
 $border-radiou-md: 12px;
@@ -32,57 +36,64 @@ $sizeDesktopXL: 1920px;
 
 $main-font-family: 'Merriweather', serif;
 
-@mixin font-xl() {
+@mixin font-xl($weight: 400) {
   font-family: $main-font-family;
-  font-weight: 400;
+  font-weight: $weight;
   font-style: normal;
   font-size: 24px;
   line-height: 28px;
 }
 
-@mixin font-lg() {
+@mixin font-lg($weight: 400) {
   font-family: $main-font-family;
-  font-weight: 400;
+  font-weight: $weight;
   font-style: normal;
   font-size: 20px;
   line-height: 28px;
 }
 
-@mixin font-md() {
+@mixin font-md($weight: 400) {
   font-family: $main-font-family;
-  font-weight: 400;
+  font-weight: $weight;
   font-style: normal;
   font-size: 16px;
   line-height: 22px;
 }
 
-@mixin font-sm() {
+@mixin font-sm($weight: 400) {
   font-family: $main-font-family;
-  font-weight: 400;
+  font-weight: $weight;
   font-style: normal;
   font-size: 14px;
   line-height: 19px;
 }
 
-@mixin font-xs() {
+@mixin font-xs($weight: 400) {
   font-family: $main-font-family;
-  font-weight: 400;
+  font-weight: $weight;
   font-style: normal;
   font-size: 11px;
   line-height: 16px;
 }
-@mixin font-links() {
+@mixin font-links($weight: 400) {
   font-family: $main-font-family;
-  font-weight: 700;
+  font-weight: $weight;
   font-style: normal;
   font-size: 16px;
   line-height: 22px;
   text-decoration: none;
   color: $color-white;
 }
+@mixin for-tablet-only {
+  @media (max-width: $sizeTablet) {
+    // hasta 768px
+    @content;
+  }
+}
+
 @mixin for-phone-only {
-  @media (max-width: 37.5rem) {
-    // 600px
+  @media (max-width: 39rem) {
+    // 624px
     @content;
   }
 }
