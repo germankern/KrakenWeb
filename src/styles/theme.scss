@@ -16,10 +16,6 @@ $margin-lg: 2rem; // 32px
 $margin-xl: 3rem; // 48px
 $margin-xxl: 4rem; // 64px
 
-$column-width-lg: 20rem; //320px
-$column-width-md: 17rem; //272px
-$column-width-sm: 12.5rem; //200px
-
 $border-radiou-xs: 4px;
 $border-radiou-sm: 8px;
 $border-radiou-md: 12px;
@@ -75,6 +71,7 @@ $main-font-family: 'Merriweather', serif;
   font-size: 11px;
   line-height: 16px;
 }
+
 @mixin font-links($weight: 400) {
   font-family: $main-font-family;
   font-weight: $weight;
@@ -84,6 +81,7 @@ $main-font-family: 'Merriweather', serif;
   text-decoration: none;
   color: $color-white;
 }
+
 @mixin for-tablet-only {
   @media (max-width: $sizeTablet) {
     // hasta 768px
