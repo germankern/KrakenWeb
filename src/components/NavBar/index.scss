@@ -63,7 +63,7 @@ $max-height-nav: 5rem;
   .containerBtnContactUs {
     position: absolute;
     top: $margin-md;
-    right: $margin-md;
+    right: $margin-lg;
     .btnContactUs {
       @include btn-contact-us(700);
     }
@@ -87,18 +87,18 @@ $max-height-nav: 5rem;
   background-color: #00b0e9;
 }
 
-@media screen and (max-width: 1024px) {
+@include for-desktop-only() {
   .navbar {
     .containerNavbar {
       gap: $margin-sm;
       a {
-        font-size: 14px;
+        font-size: $font-size-sm;
       }
     }
     .containerBtnContactUs {
       right: $margin-sm;
       .btnContactUs {
-        font-size: 12px;
+        font-size: $font-size-xs;
         padding: $margin-xs $margin-sm;
       }
     }

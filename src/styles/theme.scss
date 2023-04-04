@@ -23,6 +23,13 @@ $border-radiou-lg: 16px;
 $border-radiou-xl: 24px;
 $border-radiou-huge: 32px;
 
+$font-size-xxs: 11px;
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$font-size-lg: 20px;
+$font-size-xl: 24px;
+
 $box-shadow-xs: 0px 4px 4px;
 
 $sizePhoneLG: 393px;
@@ -71,6 +78,14 @@ $nav-font-family: 'Source Sans Pro', sans-serif;
   font-family: $main-font-family;
   font-weight: $weight;
   font-style: normal;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@mixin font-xxs($weight: 400) {
+  font-family: $main-font-family;
+  font-weight: $weight;
+  font-style: normal;
   font-size: 11px;
   line-height: 16px;
 }
@@ -92,16 +107,16 @@ $nav-font-family: 'Source Sans Pro', sans-serif;
   }
 }
 
-@mixin for-desktop-only {
-  @media (max-width: $sizeDesktop) {
-    // hasta 1024px
+@mixin for-tablet-only {
+  @media (max-width: $sizeTablet) {
+    // hasta 768px
     @content;
   }
 }
 
-@mixin for-tablet-only {
-  @media (max-width: $sizeTablet) {
-    // hasta 768px
+@mixin for-desktop-only {
+  @media (max-width: $sizeDesktop) {
+    // hasta 1024px
     @content;
   }
 }

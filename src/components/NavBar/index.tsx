@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './index.scss';
 import LogoNavbar from '../../assets/images/LogoNavbar.png';
+import { Link } from 'gatsby';
 
 const NavBar = () => {
   const [selectedPage, setSelectedPage] = useState(null);
@@ -10,40 +11,28 @@ const NavBar = () => {
   };
 
   const isSelected = (page) => {
-    return selectedPage === page ? 'selected' : 'null';
+    return selectedPage === page ? 'selected' : '';
   };
 
   return (
     <>
       <nav className="navbar">
         <div className="containerNavbar">
-          <a
-            href="https://faceitcitasrapidas.com/"
-            className={isSelected('ABOUT US')}
-            onClick={handleClick}>
+          <Link to="/about-us" className={isSelected('ABOUT US')} onClick={handleClick}>
             ABOUT US
-          </a>
-          <a
-            href="https://faceitcitasrapidas.com/"
-            className={isSelected('OUR SERVICES')}
-            onClick={handleClick}>
+          </Link>
+          <Link to="/" className={isSelected('OUR SERVICES')} onClick={handleClick}>
             OUR SERVICES
-          </a>
-          <a href="https://faceitcitasrapidas.com/">
+          </Link>
+          <Link to="/">
             <img src={LogoNavbar} alt="logo kraken"></img>
-          </a>
-          <a
-            href="https://faceitcitasrapidas.com/"
-            className={isSelected('PORTFOLIO')}
-            onClick={handleClick}>
+          </Link>
+          <Link to="/" className={isSelected('PORTFOLIO')} onClick={handleClick}>
             PORTFOLIO
-          </a>
-          <a
-            href="https://faceitcitasrapidas.com/"
-            className={isSelected('PROJECT GOTHIKA')}
-            onClick={handleClick}>
+          </Link>
+          <Link to="/" className={isSelected('PROJECT GOTHIKA')} onClick={handleClick}>
             PROJECT GOTHIKA
-          </a>
+          </Link>
         </div>
         <div className="containerBtnContactUs">
           <button className="btnContactUs">Contact Us</button>
