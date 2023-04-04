@@ -1,6 +1,6 @@
 @import '../../styles/theme.scss';
 
-$overline-nav: 0.375rem;
+$overline-nav: 0.375rem; //6px
 $max-height-nav: 5rem;
 
 @mixin btn-contact-us($weigth: 400) {
@@ -9,7 +9,7 @@ $max-height-nav: 5rem;
   font-weight: $weigth;
   font-style: normal;
   line-height: 16px;
-  padding: 8px 40px;
+  padding: $margin-xs 40px;
   color: #2c267e;
   background: #ffffff;
   box-shadow: $box-shadow-xs rgba(0, 0, 0, 0.25);
@@ -17,7 +17,7 @@ $max-height-nav: 5rem;
 }
 
 @mixin links-navbar($weigth: 400) {
-  //   font-family: Source Sans Pro;
+  font-family: $nav-font-family;
   font-size: 16px;
   font-weight: $weigth;
   font-style: normal;
@@ -70,6 +70,7 @@ $max-height-nav: 5rem;
   }
 }
 
+// funcion de overline
 .navbar a.selected {
   color: #00b0e9;
   position: relative;
@@ -84,4 +85,22 @@ $max-height-nav: 5rem;
   top: -$margin-md;
   height: $overline-nav;
   background-color: #00b0e9;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    .containerNavbar {
+      gap: $margin-sm;
+      a {
+        font-size: 14px;
+      }
+    }
+    .containerBtnContactUs {
+      right: $margin-sm;
+      .btnContactUs {
+        font-size: 12px;
+        padding: $margin-xs $margin-sm;
+      }
+    }
+  }
 }

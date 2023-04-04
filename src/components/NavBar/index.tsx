@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './index.scss';
-import LogoNavbar from '../../../public/static/LogoNavbar.png';
+import LogoNavbar from '../../assets/images/LogoNavbar.png';
 
 const NavBar = () => {
   const [selectedPage, setSelectedPage] = useState(null);
@@ -19,14 +19,12 @@ const NavBar = () => {
         <div className="containerNavbar">
           <a
             href="https://faceitcitasrapidas.com/"
-            target="_blank"
             className={isSelected('ABOUT US')}
             onClick={handleClick}>
             ABOUT US
           </a>
           <a
             href="https://faceitcitasrapidas.com/"
-            target="_blank"
             className={isSelected('OUR SERVICES')}
             onClick={handleClick}>
             OUR SERVICES
@@ -36,14 +34,12 @@ const NavBar = () => {
           </a>
           <a
             href="https://faceitcitasrapidas.com/"
-            target="_blank"
             className={isSelected('PORTFOLIO')}
             onClick={handleClick}>
             PORTFOLIO
           </a>
           <a
             href="https://faceitcitasrapidas.com/"
-            target="_blank"
             className={isSelected('PROJECT GOTHIKA')}
             onClick={handleClick}>
             PROJECT GOTHIKA

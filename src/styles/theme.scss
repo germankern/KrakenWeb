@@ -33,6 +33,7 @@ $sizeDesktopLG: 1440px;
 $sizeDesktopXL: 1920px;
 
 $main-font-family: 'Merriweather', serif;
+$nav-font-family: 'Source Sans Pro', sans-serif;
 
 @mixin font-xl($weight: 400) {
   font-family: $main-font-family;
@@ -84,16 +85,23 @@ $main-font-family: 'Merriweather', serif;
   color: $color-white;
 }
 
-@mixin for-tablet-only {
-  @media (max-width: $sizeTablet) {
-    // hasta 768px
+@mixin for-phone-only {
+  @media (max-width: 39rem) {
+    // 624px
     @content;
   }
 }
 
-@mixin for-phone-only {
-  @media (max-width: 39rem) {
-    // 624px
+@mixin for-desktop-only {
+  @media (max-width: $sizeDesktop) {
+    // hasta 1024px
+    @content;
+  }
+}
+
+@mixin for-tablet-only {
+  @media (max-width: $sizeTablet) {
+    // hasta 768px
     @content;
   }
 }
