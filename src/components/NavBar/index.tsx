@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './index.scss';
 import LogoNavbar from '../../assets/images/LogoNavbar.png';
 import { Link } from 'gatsby';
+import { MainImage } from 'gatsby-plugin-image';
 
 const NavBar = () => {
   const [selectedPage, setSelectedPage] = useState(null);
@@ -25,7 +26,7 @@ const NavBar = () => {
             OUR SERVICES
           </Link>
           <Link to="/">
-            <img src={LogoNavbar} alt="logo kraken"></img>
+            <MainImage src={LogoNavbar} alt="logo kraken" />
           </Link>
           <Link to="/" className={isSelected('PORTFOLIO')} onClick={handleClick}>
             PORTFOLIO
