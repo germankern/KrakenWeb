@@ -1,17 +1,19 @@
 $color-primary: #00b0e9;
-$color-secondary: #6c757d;
+$color-secondary: #ff3efa;
 $color-success: #28a745;
 $color-danger: #dc3545;
 $color-warning: #ffc107;
 $color-info: #17a2b8;
 $color-light: #f8f9fa;
 $color-dark: #000000;
-$color-white: #fff;
+$color-white: #ffffff;
+$color-blue: #2c267e;
+$color-dark-blue: #00053d;
 
 $margin-xxs: 0.25rem; // 4px
 $margin-xs: 0.5rem; // 8px
 $margin-sm: 1rem; // 16px
-$margin-md: 1.75rem; // 24px
+$margin-md: 1.5rem; // 24px
 $margin-lg: 2rem; // 32px
 $margin-xl: 3rem; // 48px
 $margin-xxl: 4rem; // 64px
@@ -23,6 +25,15 @@ $border-radiou-lg: 16px;
 $border-radiou-xl: 24px;
 $border-radiou-huge: 32px;
 
+$font-size-xxs: 11px;
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$font-size-lg: 20px;
+$font-size-xl: 24px;
+
+$box-shadow-xs: 0px 4px 4px;
+
 $sizePhoneLG: 393px;
 $sizeTabletSm: 426px;
 $sizeTablet: 768px;
@@ -31,6 +42,9 @@ $sizeDesktopLG: 1440px;
 $sizeDesktopXL: 1920px;
 
 $main-font-family: 'Merriweather', serif;
+$contact-us-font-family: 'Merriweather Sans', sans-serif;
+$nav-font-family: 'Source Sans Pro', sans-serif;
+$hamburger-font-family: 'Barlow', sans-serif;
 
 @mixin font-xl($weight: 400) {
   font-family: $main-font-family;
@@ -68,6 +82,14 @@ $main-font-family: 'Merriweather', serif;
   font-family: $main-font-family;
   font-weight: $weight;
   font-style: normal;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@mixin font-xxs($weight: 400) {
+  font-family: $main-font-family;
+  font-weight: $weight;
+  font-style: normal;
   font-size: 11px;
   line-height: 16px;
 }
@@ -82,6 +104,13 @@ $main-font-family: 'Merriweather', serif;
   color: $color-white;
 }
 
+@mixin for-phone-only {
+  @media (max-width: 39rem) {
+    // 624px
+    @content;
+  }
+}
+
 @mixin for-tablet-only {
   @media (max-width: $sizeTablet) {
     // hasta 768px
@@ -89,9 +118,9 @@ $main-font-family: 'Merriweather', serif;
   }
 }
 
-@mixin for-phone-only {
-  @media (max-width: 39rem) {
-    // 624px
+@mixin for-desktop-only {
+  @media (max-width: $sizeDesktop) {
+    // hasta 1024px
     @content;
   }
 }

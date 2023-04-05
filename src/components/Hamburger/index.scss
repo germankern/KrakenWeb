@@ -1,0 +1,42 @@
+@import '../../styles/theme.scss';
+
+.hamburger {
+  background-color: $color-dark;
+  max-width: 100%;
+  padding: $margin-sm $margin-md;
+  .containerHamburger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logoHamburger {
+      margin: 0 auto;
+      margin-right: calc(50% - 26px);
+    }
+    .hiddenX {
+      display: none;
+    }
+  }
+  .containerLinksHidden {
+    display: none;
+  }
+  .show {
+    color: $color-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    a {
+      @include font-xl(700);
+      font-family: $hamburger-font-family;
+      color: $color-primary;
+      margin-top: $margin-lg;
+      text-decoration: none;
+    }
+  }
+}
+
+@include for-tablet-up {
+  .hamburger {
+    display: none;
+  }
+}
