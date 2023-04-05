@@ -3,6 +3,7 @@ import './index.scss';
 import LogoNavbar from '../../assets/images/LogoNavbar.png';
 import { Link } from 'gatsby';
 import { MainImage } from 'gatsby-plugin-image';
+import Hamburger from '../Hamburger';
 
 const NavBar = () => {
   const [selectedPage, setSelectedPage] = useState(null);
@@ -37,6 +38,9 @@ const NavBar = () => {
         </div>
         <div className="containerBtnContactUs">
           <button className="btnContactUs">Contact Us</button>
+        </div>
+        <div className="hamburguer">
+          <Hamburger />
         </div>
       </nav>
     </>

@@ -20,6 +20,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@fontsource/barlow": "^4.5.9",
     "@fontsource/merriweather": "^4.5.14",
     "@fontsource/source-sans-pro": "^4.5.11",
     "gatsby": "^5.8.0",

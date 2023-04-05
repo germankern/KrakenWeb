@@ -25,81 +25,88 @@ $max-height-nav: 5rem;
   color: #ffffff;
   text-decoration: none;
 }
-
-.navbar {
-  background-color: #00053d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .containerNavbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: $margin-md;
-    height: $max-height-nav;
-    max-width: $sizeDesktop;
-    a {
-      @include links-navbar(700);
-      position: relative;
-    }
-    :hover {
-      text-decoration: none;
-      color: #00b0e9;
-      transition: 500ms;
-    }
-    :hover::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: -$margin-md;
-      height: $overline-nav;
-      background-color: #00b0e9;
-    }
-    a img {
-      padding: 0px $margin-xxs;
-    }
-  }
-  .containerBtnContactUs {
-    position: absolute;
-    top: $margin-md;
-    right: $margin-lg;
-    .btnContactUs {
-      @include btn-contact-us(700);
-    }
-  }
+.containerNavbar,
+.containerBtnContactUs {
+  display: none;
 }
 
-// funcion de overline
-.navbar a.selected {
-  color: #00b0e9;
-  position: relative;
-  text-decoration: none;
-  padding-top: 0px;
-}
-.navbar a.selected::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -$margin-md;
-  height: $overline-nav;
-  background-color: #00b0e9;
-}
-
-@include for-desktop-only() {
+@media screen and (min-width: 768px) {
   .navbar {
+    background-color: #00053d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .containerNavbar {
-      gap: $margin-sm;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: $margin-md;
+      height: $max-height-nav;
+      max-width: $sizeDesktop;
       a {
-        font-size: $font-size-sm;
+        @include links-navbar(700);
+        position: relative;
+      }
+      :hover {
+        text-decoration: none;
+        color: #00b0e9;
+        transition: 500ms;
+      }
+      :hover::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -$margin-md;
+        height: $overline-nav;
+        background-color: #00b0e9;
+      }
+      a img {
+        padding: 0px $margin-xxs;
       }
     }
     .containerBtnContactUs {
-      right: $margin-sm;
+      display: flex;
+      position: absolute;
+      top: $margin-md;
+      right: $margin-lg;
       .btnContactUs {
-        font-size: $font-size-xs;
-        padding: $margin-xs $margin-sm;
+        @include btn-contact-us(700);
+      }
+    }
+  }
+
+  // funcion de overline
+  .navbar a.selected {
+    color: #00b0e9;
+    position: relative;
+    text-decoration: none;
+    padding-top: 0px;
+  }
+  .navbar a.selected::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -$margin-md;
+    height: $overline-nav;
+    background-color: #00b0e9;
+  }
+
+  @include for-desktop-only() {
+    .navbar {
+      .containerNavbar {
+        gap: $margin-sm;
+        a {
+          font-size: $font-size-sm;
+        }
+      }
+      .containerBtnContactUs {
+        right: $margin-sm;
+        .btnContactUs {
+          font-size: $font-size-xs;
+          padding: $margin-xs $margin-sm;
+        }
       }
     }
   }

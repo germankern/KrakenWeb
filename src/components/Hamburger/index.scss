@@ -1,25 +1,49 @@
 @import '../../styles/theme.scss';
 
+@mixin font-list-hamburger() {
+  font-family: $hamburger-list;
+  font-weight: 700;
+  font-style: normal;
+  font-size: $font-size-xl;
+  line-height: $margin-xl;
+  text-decoration: none;
+}
+
 .hamburger {
-  background-color: #2e2a7b;
+  background-color: #000000;
   max-width: 100%;
-  height: 100vh;
   padding: $margin-sm $margin-md;
   .containerHamburger {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+    .logoHamburger {
+      margin: 0 auto;
+      margin-right: calc(50% - 26px);
+    }
+    .hiddenX {
+      display: none;
+    }
   }
-  .containerLinks {
+  .containerLinksHidden {
+    display: none;
+  }
+  .show {
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
     a {
-      color: #031023;
-      font-size: $font-size-xl;
-      font-weight: 700;
-      line-height: $margin-xl;
+      @include font-list-hamburger();
+      color: #00b0e9;
+      margin-top: $margin-sm;
     }
+  }
+}
+
+@include for-tablet-up {
+  .hamburger {
+    display: none;
   }
 }

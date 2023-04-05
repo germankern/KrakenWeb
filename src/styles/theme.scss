@@ -41,6 +41,7 @@ $sizeDesktopXL: 1920px;
 
 $main-font-family: 'Merriweather', serif;
 $nav-font-family: 'Source Sans Pro', sans-serif;
+$hamburger-list: 'Barlow', sans-serif;
 
 @mixin font-xl($weight: 400) {
   font-family: $main-font-family;
