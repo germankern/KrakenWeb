@@ -27,7 +27,7 @@
     height: 100vh;
     a {
       @include font-xl(700);
-      font-family: $hamburger-list;
+      font-family: $hamburger-font-family;
       color: $color-primary;
       margin-top: $margin-lg;
       text-decoration: none;

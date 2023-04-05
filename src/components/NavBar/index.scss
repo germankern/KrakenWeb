@@ -2,6 +2,7 @@
 
 $overline-nav: 0.375rem; //6px
 $max-height-nav: 5rem;
+$font-contact-us: 13px;
 
 .containerNavbar,
 .containerBtnContactUs {
@@ -53,7 +54,7 @@ $max-height-nav: 5rem;
       right: $margin-lg;
       .btnContactUs {
         @include font-sm(700);
-        font-family: $font-family-contact-us;
+        font-family: $contact-us-font-family;
         font-size: $font-contact-us;
         padding: $margin-xs $margin-lg;
         color: $color-blue;

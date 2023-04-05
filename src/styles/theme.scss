@@ -32,8 +32,6 @@ $font-size-md: 16px;
 $font-size-lg: 20px;
 $font-size-xl: 24px;
 
-$font-contact-us: 13px;
-
 $box-shadow-xs: 0px 4px 4px;
 
 $sizePhoneLG: 393px;
@@ -44,9 +42,9 @@ $sizeDesktopLG: 1440px;
 $sizeDesktopXL: 1920px;
 
 $main-font-family: 'Merriweather', serif;
-$font-family-contact-us: 'Merriweather Sans', sans-serif;
+$contact-us-font-family: 'Merriweather Sans', sans-serif;
 $nav-font-family: 'Source Sans Pro', sans-serif;
-$hamburger-list: 'Barlow', sans-serif;
+$hamburger-font-family: 'Barlow', sans-serif;
 
 @mixin font-xl($weight: 400) {
   font-family: $main-font-family;
