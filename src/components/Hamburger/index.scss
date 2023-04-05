@@ -1,16 +1,7 @@
 @import '../../styles/theme.scss';
 
-@mixin font-list-hamburger() {
-  font-family: $hamburger-list;
-  font-weight: 700;
-  font-style: normal;
-  font-size: $font-size-xl;
-  line-height: $margin-xl;
-  text-decoration: none;
-}
-
 .hamburger {
-  background-color: #000000;
+  background-color: $color-dark;
   max-width: 100%;
   padding: $margin-sm $margin-md;
   .containerHamburger {
@@ -29,15 +20,17 @@
     display: none;
   }
   .show {
-    color: white;
+    color: $color-white;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
     a {
-      @include font-list-hamburger();
-      color: #00b0e9;
-      margin-top: $margin-sm;
+      @include font-xl(700);
+      font-family: $hamburger-list;
+      color: $color-primary;
+      margin-top: $margin-lg;
+      text-decoration: none;
     }
   }
 }

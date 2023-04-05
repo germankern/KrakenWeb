@@ -3,28 +3,6 @@
 $overline-nav: 0.375rem; //6px
 $max-height-nav: 5rem;
 
-@mixin btn-contact-us($weigth: 400) {
-  font-family: $main-font-family;
-  font-size: 13px;
-  font-weight: $weigth;
-  font-style: normal;
-  line-height: 16px;
-  padding: $margin-xs 40px;
-  color: #2c267e;
-  background: #ffffff;
-  box-shadow: $box-shadow-xs rgba(0, 0, 0, 0.25);
-  border-radius: 6px;
-}
-
-@mixin links-navbar($weigth: 400) {
-  font-family: $nav-font-family;
-  font-size: 16px;
-  font-weight: $weigth;
-  font-style: normal;
-  line-height: 28px;
-  color: #ffffff;
-  text-decoration: none;
-}
 .containerNavbar,
 .containerBtnContactUs {
   display: none;
@@ -32,7 +10,7 @@ $max-height-nav: 5rem;
 
 @media screen and (min-width: 768px) {
   .navbar {
-    background-color: #00053d;
+    background-color: $color-dark-blue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,12 +22,15 @@ $max-height-nav: 5rem;
       height: $max-height-nav;
       max-width: $sizeDesktop;
       a {
-        @include links-navbar(700);
+        @include font-md(700);
+        font-family: $nav-font-family;
+        color: $color-white;
+        text-decoration: none;
         position: relative;
       }
       :hover {
         text-decoration: none;
-        color: #00b0e9;
+        color: $color-primary;
         transition: 500ms;
       }
       :hover::before {
@@ -59,7 +40,7 @@ $max-height-nav: 5rem;
         right: 0;
         top: -$margin-md;
         height: $overline-nav;
-        background-color: #00b0e9;
+        background-color: $color-primary;
       }
       a img {
         padding: 0px $margin-xxs;
@@ -71,14 +52,20 @@ $max-height-nav: 5rem;
       top: $margin-md;
       right: $margin-lg;
       .btnContactUs {
-        @include btn-contact-us(700);
+        @include font-sm(700);
+        font-size: $font-contact-us;
+        padding: $margin-xs $margin-lg;
+        color: $color-blue;
+        background: $color-white;
+        box-shadow: $box-shadow-xs rgba(0, 0, 0, 0.25);
+        border-radius: $border-radiou-sm;
       }
     }
   }
 
   // funcion de overline
   .navbar a.selected {
-    color: #00b0e9;
+    color: $color-primary;
     position: relative;
     text-decoration: none;
     padding-top: 0px;
@@ -90,7 +77,7 @@ $max-height-nav: 5rem;
     right: 0;
     top: -$margin-md;
     height: $overline-nav;
-    background-color: #00b0e9;
+    background-color: $color-primary;
   }
 
   @include for-desktop-only() {
