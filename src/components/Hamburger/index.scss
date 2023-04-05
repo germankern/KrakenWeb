@@ -1,0 +1,25 @@
+@import '../../styles/theme.scss';
+
+.hamburger {
+  background-color: #2e2a7b;
+  max-width: 100%;
+  height: 100vh;
+  padding: $margin-sm $margin-md;
+  .containerHamburger {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .containerLinks {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+      color: #031023;
+      font-size: $font-size-xl;
+      font-weight: 700;
+      line-height: $margin-xl;
+    }
+  }
+}
