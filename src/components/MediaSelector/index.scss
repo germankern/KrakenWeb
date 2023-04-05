@@ -1,0 +1,63 @@
+@import 'theme';
+
+.fromPhoneLG {
+  @media (max-width: ($sizePhoneLG - 1px)) {
+    display: none;
+  }
+}
+.fromTabletSm {
+  @media (max-width: ($sizeTabletSm - 1px)) {
+    display: none;
+  }
+}
+.fromTablet {
+  @media (max-width: ($sizeTablet - 1px)) {
+    display: none;
+  }
+}
+.fromDesktop {
+  @media (max-width: ($sizeDesktop - 1px)) {
+    display: none;
+  }
+}
+.fromDesktopLG {
+  @media (max-width: ($sizeDesktopLG - 1px)) {
+    display: none;
+  }
+}
+.fromDesktopXL {
+  @media (max-width: ($sizeDesktopXL - 1px)) {
+    display: none;
+  }
+}
+.upToPhoneLG {
+  @media (min-width: $sizePhoneLG) {
+    display: none;
+  }
+}
+.upToTabletSm {
+  @media (min-width: $sizeTabletSm) {
+    display: none;
+  }
+}
+.upToTablet {
+  @media (min-width: $sizeTablet) {
+    display: none;
+  }
+}
+.upToDesktop {
+  @media (min-width: $sizeDesktop) {
+    display: none;
+  }
+}
+.upToDesktopLG {
+  @media (min-width: $sizeDesktopLG) {
+    display: none;
+  }
+}
+
+.upToDesktopXL {
+  @media (min-width: $sizeDesktopXL) {
+    display: none;
+  }
+}
