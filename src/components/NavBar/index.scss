@@ -53,6 +53,7 @@ $max-height-nav: 5rem;
       right: $margin-lg;
       .btnContactUs {
         @include font-sm(700);
+        font-family: $font-family-contact-us;
         font-size: $font-contact-us;
         padding: $margin-xs $margin-lg;
         color: $color-blue;
