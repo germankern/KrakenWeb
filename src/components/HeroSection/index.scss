@@ -34,6 +34,7 @@
   background-repeat: repeat-y;
   background-size: 100% 100%;
   background-position: center center;
+  object-fit: cover;
   aspect-ratio: 0.5;
   .textHeroSection {
     display: flex;
@@ -41,20 +42,12 @@
     margin: $margin-xxl 0px;
     .row {
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      h2 {
-        @include font-xxxl();
-        color: $color-grey-light;
-        text-shadow: 0px 0px 50px rgba(255, 255, 255, 0.35);
-        margin: 0;
-      }
-      p {
-        @include font-xxl();
-        color: $color-white;
-        font-variant: small-caps;
-        margin: 0px 0px $margin-lg 0px;
+      img {
+        max-width: 80%;
+        width: auto;
+        object-fit: contain;
       }
     }
   }

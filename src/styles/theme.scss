@@ -47,24 +47,6 @@ $contact-us-font-family: 'Merriweather Sans', sans-serif;
 $nav-font-family: 'Source Sans Pro', sans-serif;
 $hamburger-font-family: 'Barlow', sans-serif;
 
-@mixin font-xxxl() {
-  font-family: $hamburger-font-family;
-  font-weight: 800;
-  font-style: normal;
-  font-size: 108px;
-  line-height: 130px;
-  letter-spacing: 0.05em;
-}
-
-@mixin font-xxl() {
-  font-family: $nav-font-family;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 40px;
-  line-height: 50px;
-  letter-spacing: 0.05em;
-}
-
 @mixin font-xl($weight: 400) {
   font-family: $main-font-family;
   font-weight: $weight;

@@ -2,9 +2,9 @@ import { MainImage } from 'gatsby-plugin-image';
 import React from 'react';
 import './index.scss';
 import HomeBanner from '../../assets/images/HomeBanner.png';
-// import HomeText1 from '../../assets/images/HomeText1.png';
-// import HomeText2 from '../../assets/images/HomeText2.png';
-// import HomeText3 from '../../assets/images/HomeText3.png';
+import HomeText1 from '../../assets/images/HomeText1.svg';
+import HomeText2 from '../../assets/images/HomeText2.svg';
+import HomeText3 from '../../assets/images/HomeText3.svg';
 
 const HeroSection = () => {
   return (
@@ -12,12 +12,13 @@ const HeroSection = () => {
       <MainImage src={HomeBanner} alt="descripcion" />
       <div className="textHeroSection">
         <div className="row">
-          <h2>60+</h2>
-          <p>Professionals & Growing</p>
-          <h2>DIVERSE</h2>
-          <p>Team Members across the World</p>
-          <h2>EXTENSIVE</h2>
-          <p>Professional Experience</p>
+          <MainImage src={HomeText1} alt="desc" />
+        </div>
+        <div className="row">
+          <MainImage src={HomeText2} alt="desc" />
+        </div>
+        <div className="row">
+          <MainImage src={HomeText3} alt="desc" />
         </div>
       </div>
     </div>
