@@ -9,6 +9,7 @@ $color-dark: #000000;
 $color-white: #ffffff;
 $color-blue: #2c267e;
 $color-dark-blue: #00053d;
+$color-grey-light: #d9d9d980;
 
 $margin-xxs: 0.25rem; // 4px
 $margin-xs: 0.5rem; // 8px
@@ -45,6 +46,24 @@ $main-font-family: 'Merriweather', serif;
 $contact-us-font-family: 'Merriweather Sans', sans-serif;
 $nav-font-family: 'Source Sans Pro', sans-serif;
 $hamburger-font-family: 'Barlow', sans-serif;
+
+@mixin font-xxxl() {
+  font-family: $hamburger-font-family;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 108px;
+  line-height: 130px;
+  letter-spacing: 0.05em;
+}
+
+@mixin font-xxl() {
+  font-family: $nav-font-family;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 0.05em;
+}
 
 @mixin font-xl($weight: 400) {
   font-family: $main-font-family;
