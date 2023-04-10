@@ -34,7 +34,6 @@
   background-repeat: repeat-y;
   background-size: 100% 100%;
   background-position: center center;
-  object-fit: cover;
   aspect-ratio: 0.5;
   .textHeroSection {
     display: flex;
@@ -45,10 +44,19 @@
       justify-content: center;
       align-items: center;
       img {
-        max-width: 80%;
+        max-width: 100%;
         width: auto;
         object-fit: contain;
       }
+    }
+  }
+}
+
+@include for-tablet-only {
+  .heroSection {
+    .textHeroSection {
+      margin: 0;
+      padding: $margin-md;
     }
   }
 }
