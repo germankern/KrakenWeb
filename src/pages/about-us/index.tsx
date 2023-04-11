@@ -4,22 +4,25 @@ import { MainImage } from 'gatsby-plugin-image';
 import get from 'lodash/get';
 import { StudioHead } from '../../interfaces';
 import './index.scss';
+import BannerAboutUs from '../../assets/images/BannerAboutUs.svg';
 
 const AboutUsPage = (props: Props) => {
   const studioHeads: StudioHead[] = get(props, 'data.allContentfulStudioHead.nodes');
 
   return (
     <div className="about-us">
-      <div>
-        <h3 className="title">About us!</h3>
-      </div>
-      <div>
+      <MainImage src={BannerAboutUs} alt="banner about us" />
+      <div className="membersContainer">
         {studioHeads.map((member) => (
           <div className="member" key={member.id}>
-            <MainImage src={member.avatar.url} alt={member.avatar.description} />
-            <h4>{member.name}</h4>
-            <h4>{member.title}</h4>
-            <h4>{member.quote}</h4>
+            <div className="member-img">
+              <MainImage src={member.avatar.url} alt={member.avatar.description} />
+            </div>
+            <div className="member-info">
+              <h3>{member.name}</h3>
+              <h4>{member.title}</h4>
+              <h5>{member.quote}</h5>
+            </div>
           </div>
         ))}
       </div>
