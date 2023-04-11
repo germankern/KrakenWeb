@@ -9,9 +9,6 @@ export default function Header() {
       <div className="header">
         <NavBar />
       </div>
-      <div>
-        <HeroSection />
-      </div>
     </>
   );
 }
