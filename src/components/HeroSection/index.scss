@@ -1,0 +1,41 @@
+@import '../../styles/theme.scss';
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background: url('../../assets/images/HomeBackgroundKraken.svg'),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    radial-gradient(205.9% 48.06% at 50% 50%, #00053d 0%, #000000 46.35%, #000539 100%);
+  background-repeat: repeat-y;
+  background-size: 100vw 290vw;
+  background-position: center center;
+  aspect-ratio: 0.32;
+  .textHeroSection {
+    display: flex;
+    flex-direction: column;
+    margin: $margin-xxl 0px;
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        max-width: 100%;
+        width: auto;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@include for-tablet-only {
+  .heroSection {
+    .textHeroSection {
+      margin: 0;
+      padding: $margin-md;
+    }
+  }
+}
