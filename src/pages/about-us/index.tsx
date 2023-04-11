@@ -21,7 +21,8 @@ const AboutUsPage = (props: Props) => {
             <div className="member-info">
               <h3>{member.name}</h3>
               <h4>{member.title}</h4>
-              <h5>{member.quote}</h5>
+              <h5>{member.trajectory}</h5>
+              <h6>{member.quote}</h6>
             </div>
           </div>
         ))}
@@ -49,6 +50,7 @@ export const pageQuery = graphql`
         quote
         title
         order
+        trajectory
         avatar {
           url
           filename

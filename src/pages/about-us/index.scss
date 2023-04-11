@@ -2,37 +2,60 @@
 
 .about-us {
   flex: 1;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  background: url('../../assets/images/HomeBackgroundKraken.svg'),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     radial-gradient(205.9% 48.06% at 50% 50%, #00053d 0%, #000000 46.35%, #000539 100%);
+  background-repeat: repeat-y;
+  background-size: 100vw 290vw;
+  background-position: center center;
+  aspect-ratio: 0.35;
   img {
+    display: flex;
     max-width: 100%;
+    width: 100%;
   }
   .membersContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    max-width: $sizeDesktopLG;
+    margin: $margin-xxxxl auto;
     .member {
       display: flex;
       align-items: center;
-      max-width: 24rem;
-      background-color: rgba(255, 0, 0, 0.403);
+      max-width: 32rem;
       margin: $margin-sm;
       padding: $margin-sm;
-      border: 3px solid $color-primary;
+      border: 2px solid $color-primary;
       border-radius: $border-radiou-md;
       .member-img {
-        margin-right: 0.5rem;
+        max-width: 100%;
+        img {
+          width: 160px;
+        }
       }
       .member-info {
         flex: 1;
         h3 {
+          @include font-md(700, 20px, $nav-font-family);
           color: $color-white;
+          margin: $margin-xs 0px;
         }
         h4 {
+          @include font-md(700, $nav-font-family);
           color: $color-primary;
+          margin: 0;
         }
         h5 {
+          @include font-md(600, 16px, $nav-font-family);
+          color: $color-grey;
+          margin: $margin-xs 0px;
+        }
+        h6 {
+          @include font-md(600, 16px, $nav-font-family);
+          font-style: italic;
           color: $color-white;
+          margin: 0;
         }
       }
     }
