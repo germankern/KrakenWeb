@@ -11,7 +11,7 @@ const AboutUsPage = (props: Props) => {
 
   return (
     <div className="about-us">
-      <MainImage src={BannerAboutUs} alt="banner about us" />
+      <MainImage src={BannerAboutUs} alt="banner de seccion sobre nosotros" />
       <div className="membersContainer">
         {studioHeads.map((member) => (
           <div className="member" key={member.id}>
