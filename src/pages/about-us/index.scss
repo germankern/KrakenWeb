@@ -1,7 +1,9 @@
 @import '../../styles/theme.scss';
 
 $width-memnber-cotnainer: 32rem;
+$height-memnber-cotnainer: 15rem;
 $wdith-member-img: 10rem;
+$shadow-member: 0px 0px 50px 5px;
 
 .about-us {
   flex: 1;
@@ -27,18 +29,33 @@ $wdith-member-img: 10rem;
       display: flex;
       align-items: center;
       max-width: $width-memnber-cotnainer;
+      min-height: $height-memnber-cotnainer;
       margin: $margin-sm;
       padding: $margin-sm;
       border: 2px solid $color-primary;
       border-radius: $border-radiou-md;
+      position: relative;
       .member-img {
         max-width: 100%;
+        border-radius: 50%;
+        background: $color-grey-02;
+        box-shadow: $shadow-member $color-white-025;
         img {
-          width: $wdith-member-img;
+          width: auto;
+        }
+        .linkedin-icon {
+          position: absolute;
+          bottom: $margin-md;
+          left: calc((61px + 16px) / 2);
+          right: auto;
+          img {
+            margin: 0;
+          }
         }
       }
       .member-info {
         flex: 1;
+        margin-left: $margin-sm;
         h3 {
           @include font-lg(700);
           font-family: $nav-font-family;
