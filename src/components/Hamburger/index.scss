@@ -1,23 +1,38 @@
 @import '../../styles/theme.scss';
 
+$border-btn: 1px solid #494949;
+$width-btn: 18rem;
+$radius-contact: 6px;
+
 .hamburger {
-  background-color: $color-dark;
+  background-color: $color-dark-blue;
   max-width: 100%;
-  padding: $margin-sm $margin-md;
+  padding: $margin-xs $margin-md;
   .containerHamburger {
     display: flex;
     justify-content: space-between;
     align-items: center;
     .logoHamburger {
       margin: 0 auto;
-      margin-right: calc(50% - 26px);
-    }
-    .hiddenX {
-      display: none;
+      margin-left: calc(50% - 16px);
     }
   }
   .containerLinksHidden {
     display: none;
+  }
+}
+
+.showHamburger {
+  background-color: $color-dark;
+  max-width: 100%;
+  padding: $margin-xs $margin-md;
+  .containerHamburger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logoHamburger {
+      margin-left: calc(50% - 16px);
+    }
   }
   .show {
     color: $color-white;
@@ -25,12 +40,34 @@
     flex-direction: column;
     align-items: center;
     height: 100vh;
+    background-image: url('../../assets/images/MobileImageNav.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100vw 100vh;
+    padding-top: $margin-xl;
+    gap: $margin-md;
     a {
       @include font-xl(700);
-      font-family: $hamburger-font-family;
+      font-family: $nav-font-family;
       color: $color-primary;
-      margin-top: $margin-lg;
+      background-color: $color-white-05;
       text-decoration: none;
+      text-align: center;
+      border: $border-btn;
+      border-radius: $border-radiou-xs;
+      box-shadow: 0px 0px 25px 5px $color-white-025;
+      width: $width-btn;
+      padding: $margin-md $margin-sm;
+    }
+    :last-child {
+      @include font-lg(700);
+      font-family: $nav-font-family;
+      color: $color-blue;
+      background-color: $color-white;
+      border-radius: $radius-contact;
+      box-shadow: $box-shadow-xs $color-white-025;
+      padding: $margin-sm;
+      margin-top: $margin-xxl;
     }
   }
 }
