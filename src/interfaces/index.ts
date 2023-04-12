@@ -14,6 +14,7 @@ export interface StudioHead {
   title: string;
   order: number;
   avatar: ImageAsset;
+  trajectory: string;
 }
 
 export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
