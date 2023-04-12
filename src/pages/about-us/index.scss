@@ -1,7 +1,7 @@
 @import '../../styles/theme.scss';
 
-$width-memnber-cotnainer: 32rem;
-$height-memnber-cotnainer: 15rem;
+$width-member-cotnainer: 32rem;
+$height-member-cotnainer: 15rem;
 $wdith-member-img: 10rem;
 $shadow-member: 0px 0px 50px 5px;
 
@@ -28,12 +28,10 @@ $shadow-member: 0px 0px 50px 5px;
     .member {
       display: flex;
       align-items: center;
-      max-width: $width-memnber-cotnainer;
-      min-height: $height-memnber-cotnainer;
+      max-width: $width-member-cotnainer;
+      min-height: $height-member-cotnainer;
       margin: $margin-sm;
       padding: $margin-sm;
-      border: 2px solid $color-primary;
-      border-radius: $border-radiou-md;
       position: relative;
       .member-img {
         max-width: 100%;
