@@ -1,5 +1,8 @@
 @import '../../styles/theme.scss';
 
+$width-memnber-cotnainer: 32rem;
+$wdith-member-img: 10rem;
+
 .about-us {
   flex: 1;
   background: url('../../assets/images/HomeBackgroundKraken.svg'),
@@ -23,7 +26,7 @@
     .member {
       display: flex;
       align-items: center;
-      max-width: 32rem;
+      max-width: $width-memnber-cotnainer;
       margin: $margin-sm;
       padding: $margin-sm;
       border: 2px solid $color-primary;
@@ -31,28 +34,33 @@
       .member-img {
         max-width: 100%;
         img {
-          width: 160px;
+          width: $wdith-member-img;
         }
       }
       .member-info {
         flex: 1;
         h3 {
-          @include font-md(700, 20px, $nav-font-family);
+          @include font-lg(700);
+          font-family: $nav-font-family;
           color: $color-white;
           margin: $margin-xs 0px;
         }
         h4 {
-          @include font-md(700, $nav-font-family);
+          @include font-md(700);
+          font-family: $nav-font-family;
+          text-transform: uppercase;
           color: $color-primary;
           margin: 0;
         }
         h5 {
-          @include font-md(600, 16px, $nav-font-family);
+          @include font-md(600);
+          font-family: $nav-font-family;
           color: $color-grey;
           margin: $margin-xs 0px;
         }
         h6 {
-          @include font-md(600, 16px, $nav-font-family);
+          @include font-md(600);
+          font-family: $nav-font-family;
           font-style: italic;
           color: $color-white;
           margin: 0;

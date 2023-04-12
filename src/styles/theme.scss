@@ -64,11 +64,11 @@ $hamburger-font-family: 'Barlow', sans-serif;
   line-height: 28px;
 }
 
-@mixin font-md($weight: 400, $size: 16px, $family: $main-font-family) {
-  font-family: $family;
+@mixin font-md($weight: 400) {
+  font-family: $main-font-family;
   font-weight: $weight;
   font-style: normal;
-  font-size: $size;
+  font-size: 16px;
   line-height: 22px;
 }
 
