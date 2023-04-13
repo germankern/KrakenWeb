@@ -9,6 +9,7 @@ $color-warning: #ffc107;
 $color-dark: #000000;
 $color-white: #ffffff;
 $color-white-025: #ffffff40;
+$color-white-05: rgba(255, 255, 255, 0.05);
 $color-grey: #a0a0a0;
 $color-grey-light: #d9d9d980;
 $color-grey-02: #d9d9d933;
@@ -106,6 +107,13 @@ $hamburger-font-family: 'Barlow', sans-serif;
   line-height: 22px;
   text-decoration: none;
   color: $color-white;
+}
+
+@mixin for-tablet-md {
+  @media (max-width: 31rem) {
+    // 496px
+    @content;
+  }
 }
 
 @mixin for-phone-only {
