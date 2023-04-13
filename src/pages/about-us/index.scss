@@ -100,10 +100,8 @@ $shadow-member: 0px 0px 50px 5px;
             width: $width-member-img-mobile;
           }
           .linkedin-icon {
-            top: auto;
             bottom: $margin-xxl;
             left: calc((56px + 16px) / 2);
-            right: auto;
             img {
               width: $width-icon-mobile;
             }
