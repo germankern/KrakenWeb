@@ -1,11 +1,13 @@
 @import '../../styles/theme.scss';
 
-$width-member-cotnainer: 32rem;
-$height-member-cotnainer: 15rem;
-$height-member-cotnainer-mobile: 20rem;
+$width-member-container: 32rem;
+$height-member-container: 15rem;
+$height-member-container-mobile: 20rem;
 $width-member-img-mobile: 9rem;
 $width-icon-mobile: 5.5rem;
 $shadow-member: 0px 0px 50px 5px;
+$position-icon-mobile: 36px;
+$position-icon-desktop: 42px;
 
 .about-us {
   flex: 1;
@@ -30,8 +32,8 @@ $shadow-member: 0px 0px 50px 5px;
     .member {
       display: flex;
       align-items: center;
-      max-width: $width-member-cotnainer;
-      min-height: $height-member-cotnainer;
+      max-width: $width-member-container;
+      min-height: $height-member-container;
       margin: $margin-sm;
       padding: $margin-sm;
       position: relative;
@@ -46,7 +48,7 @@ $shadow-member: 0px 0px 50px 5px;
         .linkedin-icon {
           position: absolute;
           bottom: $margin-md;
-          left: calc((61px + 16px) / 2);
+          left: $position-icon-desktop;
           right: auto;
           img {
             margin: 0;
@@ -92,7 +94,7 @@ $shadow-member: 0px 0px 50px 5px;
     .membersContainer {
       margin: $margin-xxl auto;
       .member {
-        height: $height-member-cotnainer-mobile;
+        height: $height-member-container-mobile;
         margin: $margin-sm $margin-xs;
         padding: $margin-xs;
         .member-img {
@@ -101,7 +103,7 @@ $shadow-member: 0px 0px 50px 5px;
           }
           .linkedin-icon {
             bottom: $margin-xxl;
-            left: calc((56px + 16px) / 2);
+            left: $position-icon-mobile;
             img {
               width: $width-icon-mobile;
             }
