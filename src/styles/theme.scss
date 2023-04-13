@@ -109,6 +109,13 @@ $hamburger-font-family: 'Barlow', sans-serif;
   color: $color-white;
 }
 
+@mixin for-tablet-md {
+  @media (max-width: 31rem) {
+    // 496px
+    @content;
+  }
+}
+
 @mixin for-phone-only {
   @media (max-width: 39rem) {
     // 624px

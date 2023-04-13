@@ -2,7 +2,9 @@
 
 $width-member-cotnainer: 32rem;
 $height-member-cotnainer: 15rem;
-$wdith-member-img: 10rem;
+$height-member-cotnainer-mobile: 20rem;
+$width-member-img-mobile: 9rem;
+$width-icon-mobile: 5.5rem;
 $shadow-member: 0px 0px 50px 5px;
 
 .about-us {
@@ -79,6 +81,39 @@ $shadow-member: 0px 0px 50px 5px;
           font-style: italic;
           color: $color-white;
           margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@include for-tablet-md() {
+  .about-us {
+    .membersContainer {
+      margin: $margin-xxl auto;
+      .member {
+        height: $height-member-cotnainer-mobile;
+        margin: $margin-sm $margin-xs;
+        padding: $margin-xs;
+        .member-img {
+          img {
+            width: $width-member-img-mobile;
+          }
+          .linkedin-icon {
+            top: auto;
+            bottom: $margin-xxl;
+            left: calc((56px + 16px) / 2);
+            right: auto;
+            img {
+              width: $width-icon-mobile;
+            }
+          }
+        }
+        .member-info {
+          margin-left: $margin-sm;
+          h3 {
+            margin: 0px 0px $margin-xs 0px;
+          }
         }
       }
     }
