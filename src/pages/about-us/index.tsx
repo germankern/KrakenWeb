@@ -4,7 +4,7 @@ import { MainImage } from 'gatsby-plugin-image';
 import get from 'lodash/get';
 import { StudioHead } from '../../interfaces';
 import './index.scss';
-import BannerAboutUs from '../../assets/images/BannerAboutUs.svg';
+import BannerAboutUs from '../../assets/images/BannerAboutUs.png';
 import LinkedinMembers from '../../assets/images/LinkedinMembers.svg';
 
 const AboutUsPage = (props: Props) => {
