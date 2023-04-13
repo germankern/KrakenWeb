@@ -17,4 +17,13 @@ export interface StudioHead {
   trajectory: string;
 }
 
+export interface Service {
+  id: string;
+  order: number;
+  link: string;
+  background: ImageAsset;
+  title: string;
+  description: string;
+}
+
 export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
