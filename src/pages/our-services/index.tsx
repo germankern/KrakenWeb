@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import { MainImage } from 'gatsby-plugin-image';
 import get from 'lodash/get';
 import { Service } from '../../interfaces';
