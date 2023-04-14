@@ -32,7 +32,7 @@ const Hamburger = () => {
           <Link to="/about-us" onClick={toggleLinks}>
             ABOUT US
           </Link>
-          <Link to="/" onClick={toggleLinks}>
+          <Link to="/our-services" onClick={toggleLinks}>
             OUR SERVICES
           </Link>
           <Link to="/" onClick={toggleLinks}>
