@@ -23,7 +23,7 @@ const NavBar = () => {
           <Link to="/about-us" className={isSelected('ABOUT US')} onClick={handleClick}>
             ABOUT US
           </Link>
-          <Link to="/" className={isSelected('OUR SERVICES')} onClick={handleClick}>
+          <Link to="/our-services" className={isSelected('OUR SERVICES')} onClick={handleClick}>
             OUR SERVICES
           </Link>
           <Link to="/">

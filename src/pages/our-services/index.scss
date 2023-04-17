@@ -1,6 +1,121 @@
 @import '../../styles/theme.scss';
 
+@mixin font-title-service($weight: 800) {
+  font-family: $hamburger-font-family;
+  font-weight: $weight;
+  font-style: normal;
+  font-size: 25px;
+  letter-spacing: 0.05em;
+}
+
+$width-service-container: 502px;
+$height-service-container: 380px;
+$width-service-container-mobile: 360px;
+$size-icon-services: 28px;
+$line-height-desktop: 30px;
+
 .our-services {
-  .servicesContainer {
+  background: url('../../assets/images/OurServicesBackground.svg'),
+    linear-gradient(180deg, rgba(20, 0, 40, 0) 37.74%, #031023 100%);
+  background-blend-mode: soft-light, normal;
+  background-repeat: repeat-y;
+  background-size: 100vw 142vw;
+  background-position: center center;
+  background-color: $color-bg-dark-blue;
+  .banner-our-services {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin-top: -2px;
+  }
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: $margin-xxxxl $margin-xs;
+    max-width: $sizeDesktopLG;
+    margin: 0 auto;
+    gap: $margin-xxl $margin-sm;
+    @include for-phone-only() {
+      padding: $margin-xxl $margin-xs;
+    }
+    .service {
+      position: relative;
+      width: $width-service-container;
+      height: $height-service-container;
+      border: 0.5px solid $color-white;
+      box-shadow: 0px 0px 40px 6px $color-white-025;
+      border-radius: $border-radiou-xs;
+      @include for-tablet-md() {
+        width: $width-service-container-mobile;
+      }
+      .bg-service {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @include for-tablet-md() {
+          top: calc(-14.24%);
+          object-fit: contain;
+        }
+      }
+      .bg-service-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 55%;
+        background: linear-gradient(
+          360deg,
+          #000000 0%,
+          rgba(0, 0, 0, 0.5) 29.4%,
+          rgba(0, 0, 0, 0) 53.62%
+        );
+        z-index: 10;
+      }
+      h3 {
+        position: absolute;
+        bottom: 45%;
+        left: $margin-lg;
+        @include font-title-service();
+        color: $color-white;
+        z-index: 11;
+      }
+      .icon-service {
+        position: absolute;
+        left: calc(100% - $margin-xxl);
+        top: 41.5%;
+        width: $size-icon-services;
+        height: auto;
+        z-index: 12;
+      }
+      .description-service {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 46%;
+        background-color: $color-dark-212121;
+        box-sizing: border-box;
+        padding: $margin-md;
+        @include for-tablet-md() {
+          height: 45%;
+          padding: $margin-sm $margin-md;
+        }
+        h4 {
+          @include font-sm(600);
+          color: $color-white;
+          font-family: $nav-font-family;
+          line-height: $line-height-desktop;
+          margin: 0;
+          @include for-tablet-md() {
+            line-height: $margin-md;
+          }
+        }
+      }
+    }
   }
 }

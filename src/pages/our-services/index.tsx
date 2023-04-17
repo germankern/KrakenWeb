@@ -4,20 +4,35 @@ import { MainImage } from 'gatsby-plugin-image';
 import get from 'lodash/get';
 import { Service } from '../../interfaces';
 import './index.scss';
+import BannerOurServices from '../../assets/images/BannerOurServices.png';
+import IconService from '../../assets/images/IconService.svg';
 
 const OurServicesPage = (props: Props) => {
   const services: Service[] = get(props, 'data.allContentfulService.nodes');
 
   return (
     <div className="our-services">
-      <div className="servicesContainer">
+      <MainImage
+        className="banner-our-services"
+        src={BannerOurServices}
+        alt="banner de seccion our services"
+      />
+      <div className="services-container">
         {services.map((service) => (
           <div className="service" key={service.id}>
-            <MainImage src={service.background.url} alt={service.background.description} />
-            <h3>{service.title}</h3>
-            <h4>{service.order}</h4>
-            <h5>{service.id}</h5>
-            <h6>{service.link}</h6>
+            <a href={service.link} target="_blank" rel="noopener noreferrer">
+              <MainImage
+                className="bg-service"
+                src={service.background.url}
+                alt={service.background.description}
+              />
+              <div className="bg-service-overlay" />
+              <h3>{service.title}</h3>
+              <MainImage className="icon-service" src={IconService} alt="icon services" />
+            </a>
+            <div className="description-service">
+              <h4>{service.description}</h4>
+            </div>
           </div>
         ))}
       </div>
