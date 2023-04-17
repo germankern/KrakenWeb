@@ -19,8 +19,9 @@ $line-height-desktop: 30px;
     linear-gradient(180deg, rgba(20, 0, 40, 0) 37.74%, #031023 100%);
   background-blend-mode: soft-light, normal;
   background-repeat: repeat-y;
-  background-size: 100%;
+  background-size: 100vw 142vw;
   background-position: center center;
+  background-color: $color-bg-dark-blue;
   .banner-our-services {
     display: flex;
     max-width: 100%;
@@ -32,7 +33,7 @@ $line-height-desktop: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: $margin-xxl $margin-xs;
+    padding: $margin-xxxxl $margin-xs;
     max-width: $sizeDesktopLG;
     margin: 0 auto;
     gap: $margin-xxl $margin-sm;
@@ -99,9 +100,7 @@ $line-height-desktop: 30px;
         height: 46%;
         background-color: $color-dark-212121;
         box-sizing: border-box;
-        padding: 0 $margin-lg;
-        padding-top: auto;
-        padding-bottom: auto;
+        padding: $margin-md $margin-lg;
         @include for-tablet-md() {
           height: 45%;
           padding: $margin-sm $margin-md;
@@ -111,8 +110,8 @@ $line-height-desktop: 30px;
           color: $color-white;
           font-family: $nav-font-family;
           line-height: $line-height-desktop;
+          margin: 0;
           @include for-tablet-md() {
-            margin: 0;
             line-height: $margin-md;
           }
         }
