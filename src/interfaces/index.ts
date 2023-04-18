@@ -26,4 +26,12 @@ export interface Service {
   description: string;
 }
 
+export interface OurWork {
+  id: string;
+  order: number;
+  image: ImageAsset;
+  title: string;
+  description: string;
+}
+
 export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl';

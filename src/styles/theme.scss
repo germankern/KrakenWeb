@@ -53,6 +53,13 @@ $contact-us-font-family: 'Merriweather Sans', sans-serif;
 $nav-font-family: 'Source Sans Pro', sans-serif;
 $hamburger-font-family: 'Barlow', sans-serif;
 
+@mixin font-xxxl($weight: 800) {
+  font-family: $hamburger-font-family;
+  font-weight: $weight;
+  font-style: normal;
+  font-size: 60px;
+  line-height: 72px;
+}
 @mixin font-xl($weight: 400) {
   font-family: $main-font-family;
   font-weight: $weight;
