@@ -59,17 +59,17 @@ interface Props {
 
 export default OurWorkSection;
 
-// export const pageQuery = graphql`
-//   query OurWorkQuery {
-//     allContentfulWork(sort: { order: ASC }) {
-//       nodes {
-//         id
-//         order
-//         image {
-//           name
-//           description
-//         }
-//       }
-//     }
-//   }
-// `;
+export const pageQuery = graphql`
+  query OurWorkQuery {
+    allContentfulWork(sort: { order: ASC }) {
+      nodes {
+        id
+        order
+        image {
+          name
+          description
+        }
+      }
+    }
+  }
+`;
