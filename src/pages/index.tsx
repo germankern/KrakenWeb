@@ -11,7 +11,7 @@ const HomePage = (props: Props) => {
   const works: OurWork[] = get(props, 'data.allContentfulOurWork.nodes');
 
   return (
-    <div className="pageStyles">
+    <div className="home-container">
       <HeroSection />
       <OurWorkSection works={works} />;
     </div>
