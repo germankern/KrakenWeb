@@ -3,7 +3,6 @@ import React from 'react';
 import './index.scss';
 import BannerHome from '../../assets/images/BannerHome.png';
 import HomeText from '../../assets/images/HomeText.svg';
-import OurWorkSection from '../OurWorkSection';
 
 const HeroSection = () => {
   return (
@@ -13,9 +12,6 @@ const HeroSection = () => {
         <div className="textHeroSection">
           <div className="row">
             <MainImage src={HomeText} alt="background giant kraken" />
-          </div>
-          <div>
-            <OurWorkSection />
           </div>
         </div>
       </div>
