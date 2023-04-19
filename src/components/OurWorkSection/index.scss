@@ -1,29 +1,46 @@
 @import '../../styles/theme.scss';
 
+$size-img-desktop: 20rem;
+$size-img-mobile: 18rem;
+$margin-rigth-carrousel: 10rem;
+$max-width-carrousel: 1366px;
+
 .our-work {
   display: flex;
-  flex-direction: column;
-  border: 3px solid white;
-  max-width: $sizeDesktopLG;
+  justify-content: center;
   margin: 0 auto;
-  overflow-x: hidden;
-  h3 {
-    @include font-xxxl(800);
-    color: $color-primary;
-    letter-spacing: 0.05em;
-    text-align: center;
+  padding: $margin-md;
+  img {
+    width: 100%;
+    height: auto;
+    @include for-tablet-only {
+      width: 70%;
+    }
   }
+}
+.width-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: $max-width-carrousel;
+  overflow-x: hidden;
+  padding: $margin-xs;
   .slider-container {
     margin: 0 auto;
     overflow-x: hidden;
-    border: 2px solid rgb(0, 255, 17);
     .slider {
       display: flex;
+      position: relative;
+      right: $margin-rigth-carrousel;
       cursor: grab;
       .item {
-        width: 320px;
-        height: 320px;
-        padding: 8px;
+        width: $size-img-desktop;
+        height: $size-img-desktop;
+        padding: $margin-xs;
+        @include for-tablet-only {
+          max-width: $size-img-mobile;
+          max-height: $size-img-mobile;
+        }
         img {
           width: 100%;
           height: 100%;

@@ -3,6 +3,7 @@ import { OurWork } from '../../interfaces';
 import { MainImage } from 'gatsby-plugin-image';
 import { motion } from 'framer-motion';
 import './index.scss';
+import OurWorkImg from '../../assets/images/OurWork.svg';
 
 const OurWorkSection = ({ works }: Props) => {
   const containerRef = useRef(null);
@@ -12,21 +13,23 @@ const OurWorkSection = ({ works }: Props) => {
     if (containerRef.current) {
       const containerWidth = containerRef.current.offsetWidth;
 
-      setMaxDrag(-containerWidth + 350);
+      setMaxDrag(-containerWidth + 525);
     }
   }, [containerRef]);
 
   return (
     <>
       <div className="our-work">
-        <h3>OUR WORK</h3>
+        <MainImage src={OurWorkImg} alt="our work tittle" />
+      </div>
+      <div className="width-container">
         <motion.div className="slider-container" ref={containerRef}>
           <motion.div
             className="slider"
             drag="x"
-            dragElastic={1}
+            dragElastic={0.5}
             dragMomentum={true}
-            dragConstraints={{ left: 0, right: maxDrag }}>
+            dragConstraints={{ left: 160, right: maxDrag }}>
             {works.map((work) => (
               <motion.div className="item" key={work.id}>
                 <MainImage src={work.image.url} alt={work.image.description} />
