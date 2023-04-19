@@ -33,18 +33,23 @@ $max-width-carrousel: 1366px;
       position: relative;
       right: $margin-rigth-carrousel;
       cursor: grab;
-      .item {
-        width: $size-img-desktop;
-        height: $size-img-desktop;
-        padding: $margin-xs;
-        @include for-tablet-only {
-          max-width: $size-img-mobile;
-          max-height: $size-img-mobile;
-        }
-        img {
-          width: 100%;
-          height: 100%;
-          pointer-events: none;
+      .link {
+        cursor: grab;
+        -webkit-user-drag: none;
+        pointer-events: auto;
+        .item {
+          width: $size-img-desktop;
+          height: $size-img-desktop;
+          padding: $margin-xs;
+          @include for-tablet-only {
+            max-width: $size-img-mobile;
+            max-height: $size-img-mobile;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+          }
         }
       }
     }

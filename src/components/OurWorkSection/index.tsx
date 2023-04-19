@@ -31,9 +31,16 @@ const OurWorkSection = ({ works }: Props) => {
             dragMomentum={true}
             dragConstraints={{ left: 160, right: maxDrag }}>
             {works.map((work) => (
-              <motion.div className="item" key={work.id}>
-                <MainImage src={work.image.url} alt={work.image.description} />
-              </motion.div>
+              <a
+                className="link"
+                href={work.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={work.id}>
+                <motion.div className="item">
+                  <MainImage src={work.image.url} alt={work.image.description} />
+                </motion.div>
+              </a>
             ))}
           </motion.div>
         </motion.div>

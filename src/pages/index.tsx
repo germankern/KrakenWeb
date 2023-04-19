@@ -33,6 +33,7 @@ export const pageQuery = graphql`
         id
         order
         title
+        link
         image {
           height
           id

@@ -31,6 +31,7 @@ export interface OurWork {
   order: number;
   image: ImageAsset;
   title: string;
+  link: string;
 }
 
 export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
