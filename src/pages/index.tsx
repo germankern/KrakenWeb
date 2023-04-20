@@ -4,15 +4,18 @@ import { graphql } from 'gatsby';
 import get from 'lodash/get';
 import HeroSection from '../components/HeroSection';
 import OurWorkSection from '../components/OurWorkSection';
-import { OurWork } from '../interfaces';
+import { Company, OurWork } from '../interfaces';
 import './index.scss';
+import WorkWithSection from '../components/WorkWithSection';
 
 const HomePage = (props: Props) => {
   const works: OurWork[] = get(props, 'data.allContentfulOurWork.nodes');
+  const companies: Company[] = get(props, 'data.allContentfulCompany.nodes');
 
   return (
     <div className="home-container">
       <HeroSection />
+      <WorkWithSection companies={companies} />;
       <OurWorkSection works={works} />;
     </div>
   );
@@ -22,6 +25,9 @@ interface Props {
   data: {
     allContentfulOurWork: {
       nodes: OurWork[];
+    };
+    allContentfulCompany: {
+      nodes: Company[];
     };
   };
 }
@@ -41,6 +47,21 @@ export const pageQuery = graphql`
           width
           url
           description
+        }
+      }
+    }
+    allContentfulCompany {
+      nodes {
+        id
+        order
+        link
+        row
+        image {
+          id
+          description
+          url
+          width
+          height
         }
       }
     }

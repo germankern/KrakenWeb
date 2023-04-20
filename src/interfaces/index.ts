@@ -34,4 +34,12 @@ export interface OurWork {
   link: string;
 }
 
+export interface Company {
+  id: string;
+  order: number;
+  link: string;
+  row: string;
+  image: ImageAsset;
+}
+
 export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
