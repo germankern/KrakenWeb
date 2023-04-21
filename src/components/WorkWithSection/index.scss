@@ -1,49 +1,91 @@
 @import '../../styles/theme.scss';
 
-.work-with-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@mixin brands-gradient-right() {
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 100%;
+  left: -79.58px;
+  right: 100vh;
+  top: -24px;
+  background: linear-gradient(89.93deg, #000000 30.55%, rgba(0, 0, 0, 0) 99.92%);
+}
+
+@mixin brands-gradient-left() {
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 100%;
+  left: auto;
+  right: -79.58px;
+  top: -24px;
+  background: linear-gradient(-89.93deg, #000000 30.55%, rgba(0, 0, 0, 0) 99.92%);
+  z-index: 10;
+}
+
+$width-rows-brands: 2400px;
+$half-width-rows-brands: -1200px;
+$width-brand: 75px;
+$height-brand: 50px;
+
+.main-container {
   background-color: $color-dark;
-  margin: 0 auto;
-  max-width: $sizeDesktop;
-  padding: $margin-sm;
-  img {
-    width: 100%;
-    height: auto;
-  }
-  .slider-brands-container {
-    position: relative;
-    opacity: 0.8;
-    max-width: $sizeDesktopLG;
-    width: 100%;
-    height: auto;
-    margin: auto;
-    overflow: hidden;
-    padding: $margin-sm 0px;
-    &::after {
-      content: '';
-      position: absolute;
-      width: 200px;
-      height: 100%;
-      left: -79.58px;
-      right: 100vh;
-      top: -24px;
-      background: linear-gradient(89.93deg, #000000 30.55%, rgba(0, 0, 0, 0) 99.92%);
+  padding: $margin-md;
+  .work-with-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: $sizeDesktop;
+    .img-desktop {
+      max-width: calc($sizeDesktop - 10vh);
+      padding: $margin-sm;
+      @include for-desktop-only() {
+        max-width: 90%;
+      }
+      @include for-phone-only() {
+        display: none;
+      }
     }
-    .slider-brands {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      animation: scroll 40s linear infinite;
-      -webkit-animation: scroll 40s linear infinite;
-      width: calc(200px * 14);
-      .slide {
-        width: 200px;
-        padding: 8px 16px;
-        .img-company {
-          width: 100%;
-          max-height: 0.5;
+    .img-mobile {
+      display: none;
+      @include for-phone-only() {
+        display: flex;
+        width: 85%;
+      }
+    }
+    .slider-brands-container {
+      position: relative;
+      opacity: 0.85;
+      width: 100%;
+      height: auto;
+      margin: auto;
+      overflow: hidden;
+      padding: $margin-sm 0px;
+      &::after {
+        @include brands-gradient-right();
+      }
+      &::before {
+        @include brands-gradient-left();
+      }
+      .slider-brands {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        animation: scroll 25s linear infinite;
+        -webkit-animation: scroll 25s linear infinite;
+        width: $width-rows-brands;
+        padding: $margin-sm 0px;
+        @include for-tablet-md() {
+          padding: $margin-xs 0px;
+        }
+        .slide {
+          width: $width-brand;
+          padding: $margin-xs;
+          .img-company {
+            width: 100%;
+            max-height: $height-brand;
+          }
         }
       }
     }
@@ -56,7 +98,7 @@
     transform: translateX(0);
   }
   100% {
-    -webkit-transfrom: translateX(calc(-200px * 7));
-    transform: translateX(calc(-200px * 7));
+    -webkit-transfrom: translateX($half-width-rows-brands);
+    transform: translateX($half-width-rows-brands);
   }
 }
