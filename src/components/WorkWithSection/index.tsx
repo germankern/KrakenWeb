@@ -26,7 +26,7 @@ const WorkWithSection = ({ companies }: Props) => {
           <div className="slider-brands-container">
             {rows.map((companiesOnRow) => (
               <>
-                <div className="slider-brands" key={companiesOnRow.length}>
+                <div className="slider-brands">
                   {[...companiesOnRow, ...companiesOnRow].map((company) => (
                     <a
                       className="slide"
