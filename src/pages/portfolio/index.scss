@@ -1,6 +1,10 @@
 @import '../../styles/theme.scss';
 
-.portfolio {
+$width-portfolio-desktop: 502px;
+$height-portfolio-desktop: 410px;
+$shadow-portfolio: 0px 0px 20px 4px rgba(255, 62, 250, 0.25);
+
+.portfolio-section {
   background: url('../../assets/images/OurServicesBackground.svg'),
     linear-gradient(180deg, rgba(20, 0, 40, 0) 37.74%, #031023 100%);
   background-blend-mode: soft-light, normal;
@@ -16,5 +20,66 @@
     font-size: 80px;
     line-height: 101px;
     text-align: center;
+  }
+  .portfolios-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: $margin-xxxxl 0px;
+    max-width: $sizeDesktopLG;
+    margin: 0 auto;
+    gap: $margin-lg;
+    .portfolio {
+      position: relative;
+      width: $width-portfolio-desktop;
+      height: $height-portfolio-desktop;
+      border: 0.5px solid $color-white;
+      box-shadow: $shadow-portfolio;
+      border-radius: $border-radiou-xs;
+      a {
+        text-decoration: none;
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .title-container {
+          position: relative;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          margin-left: $margin-lg;
+          z-index: 4;
+          h3 {
+            @include font-xl();
+            color: $color-white;
+            margin: 0;
+          }
+          h4 {
+            @include font-md();
+            color: $color-white;
+            text-transform: uppercase;
+          }
+        }
+        .overlay {
+          position: absolute;
+          width: 100%;
+          height: 50%;
+          left: 0px;
+          top: 50%;
+          background: linear-gradient(
+            180deg,
+            rgba(33, 33, 33, 0) 0%,
+            rgba(33, 33, 33, 0.75) 47.4%,
+            #212121 100%
+          );
+          z-index: 3;
+        }
+      }
+    }
   }
 }

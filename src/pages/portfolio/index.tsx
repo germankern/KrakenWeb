@@ -8,15 +8,18 @@ import { MainImage } from 'gatsby-plugin-image';
 const PorfolioPage = (props: Props) => {
   const portfolios: PortfolioClient[] = get(props, 'data.allContentfulPortfolioClient.nodes');
   return (
-    <div className="portfolio">
+    <div className="portfolio-section">
       <h2>PORTFOLIO</h2>
       <div className="portfolios-container">
         {portfolios.map((portfolio) => (
           <div className="portfolio" key={portfolio.id}>
             <a href={portfolio.link} target="_blank" rel="noopener noreferrer">
               <MainImage src={portfolio.image.url} alt={portfolio.image.description} />
-              <h3>{portfolio.title}</h3>
-              <h4>{portfolio.description}</h4>
+              <div className="title-container">
+                <h3>{portfolio.title}</h3>
+                <h4>{portfolio.description}</h4>
+              </div>
+              <div className="overlay"></div>
             </a>
           </div>
         ))}
@@ -40,6 +43,7 @@ export const pageQuery = graphql`
     allContentfulPortfolioClient {
       nodes {
         id
+        title
         description
         link
         image {
