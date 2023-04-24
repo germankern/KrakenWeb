@@ -35,7 +35,7 @@ const Hamburger = () => {
           <Link to="/our-services" onClick={toggleLinks}>
             OUR SERVICES
           </Link>
-          <Link to="/" onClick={toggleLinks}>
+          <Link to="/portfolio" onClick={toggleLinks}>
             PORTFOLIO
           </Link>
           <Link to="/" onClick={toggleLinks}>

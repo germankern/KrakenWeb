@@ -42,4 +42,13 @@ export interface Company {
   image: ImageAsset;
 }
 
+export interface PortfolioClient {
+  id: string;
+  title: string;
+  description: string;
+  link: string;
+  image: ImageAsset;
+  categories: string;
+}
+
 export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl';

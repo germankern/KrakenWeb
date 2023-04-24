@@ -29,7 +29,7 @@ const NavBar = () => {
           <Link to="/">
             <MainImage src={LogoNavbar} alt="logo kraken" />
           </Link>
-          <Link to="/" className={isSelected('PORTFOLIO')} onClick={handleClick}>
+          <Link to="/portfolio" className={isSelected('PORTFOLIO')} onClick={handleClick}>
             PORTFOLIO
           </Link>
           <Link to="/" className={isSelected('PROJECT GOTHIKA')} onClick={handleClick}>
