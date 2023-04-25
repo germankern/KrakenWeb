@@ -38,6 +38,7 @@ $font-size-sm: 14px;
 $font-size-md: 16px;
 $font-size-lg: 20px;
 $font-size-xl: 24px;
+$font-size-xxl: 32px;
 
 $box-shadow-xs: 0px 4px 4px;
 
@@ -52,6 +53,7 @@ $main-font-family: 'Merriweather', serif;
 $contact-us-font-family: 'Merriweather Sans', sans-serif;
 $nav-font-family: 'Source Sans Pro', sans-serif;
 $hamburger-font-family: 'Barlow', sans-serif;
+$font-lato: 'Lato', 'sans-serif';
 
 @mixin font-xxxl($weight: 800) {
   font-family: $hamburger-font-family;

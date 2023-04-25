@@ -5,6 +5,7 @@ import '@fontsource/merriweather';
 import '@fontsource/merriweather-sans';
 import '@fontsource/source-sans-pro';
 import '@fontsource/barlow';
+import '@fontsource/lato';
 
 export const wrapPageElement: GatsbyBrowser['wrapPageElement'] = ({ element }) => {
   return <Layout>{element}</Layout>;
