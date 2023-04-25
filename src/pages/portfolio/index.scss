@@ -1,8 +1,32 @@
 @import '../../styles/theme.scss';
 
+@mixin titlte-portfolio() {
+  color: #ff3efa;
+  font-family: $main-font-family;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 101px;
+  text-align: center;
+}
+
+@mixin btn-filters() {
+  color: $color-white;
+  background-color: $color-white-025;
+  border: 1px solid $color-white;
+  border-radius: $border-radiou-lg;
+  padding: $margin-xs $margin-md;
+  font-family: $font-lato;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+$font-title-tablet: 3rem;
 $width-portfolio-desktop: 502px;
 $height-portfolio-desktop: 410px;
 $shadow-portfolio: 0px 0px 20px 4px rgba(255, 62, 250, 0.25);
+$paddding-circle: 8px 10.5px;
 
 .portfolio-section {
   background: url('../../assets/images/OurServicesBackground.svg'),
@@ -14,12 +38,39 @@ $shadow-portfolio: 0px 0px 20px 4px rgba(255, 62, 250, 0.25);
   background-color: $color-bg-dark-blue;
   min-height: 100vh;
   h2 {
-    color: #ff3efa;
-    font-family: $main-font-family;
-    font-weight: 700;
-    font-size: 80px;
-    line-height: 101px;
-    text-align: center;
+    @include titlte-portfolio();
+    @include for-tablet-only() {
+      font-size: $font-title-tablet;
+    }
+  }
+  .categories-container {
+    display: flex;
+    justify-content: center;
+    ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0;
+      li {
+        text-decoration: none;
+        list-style: none;
+        padding: $margin-xs;
+        button {
+          @include btn-filters();
+        }
+        .btn-selected {
+          color: $color-dark;
+          background-color: $color-white;
+        }
+      }
+      .btn-remove-filters {
+        @include btn-filters();
+        border-radius: $border-radiou-lg;
+        margin: $margin-xs;
+        padding: $paddding-circle;
+        width: $font-size-xxl;
+      }
+    }
   }
   .portfolios-container {
     display: flex;

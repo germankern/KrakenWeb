@@ -48,7 +48,7 @@ export interface PortfolioClient {
   description: string;
   link: string;
   image: ImageAsset;
-  categories: string;
+  categories: string[] | null;
 }
 
 export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
