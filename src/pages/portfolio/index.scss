@@ -38,11 +38,12 @@ $paddding-circle: 8px 10.5px;
   background-size: 100vw 142vw;
   background-position: center center;
   background-color: $color-bg-dark-blue;
-  min-height: 100vh;
   h2 {
     @include titlte-portfolio();
     @include for-tablet-only() {
       font-size: $font-title-tablet;
+      padding: $margin-md;
+      margin: 0;
     }
   }
   .categories-container {
@@ -78,12 +79,12 @@ $paddding-circle: 8px 10.5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: $margin-xxxxl 0px;
+    padding: $margin-lg 0px $margin-xxxxl;
     max-width: $sizeDesktopLG;
     margin: 0 auto;
     gap: $margin-xl;
     @include for-phone-only() {
-      padding: $margin-xxl 0px;
+      padding-bottom: $margin-xxl;
       gap: $margin-lg;
     }
     .portfolio {
