@@ -24,7 +24,9 @@
 
 $font-title-tablet: 3rem;
 $width-portfolio-desktop: 502px;
+$width-portfolio-mobile: 340px;
 $height-portfolio-desktop: 410px;
+$height-portfolio-mobile: 290px;
 $shadow-portfolio: 0px 0px 20px 4px rgba(255, 62, 250, 0.25);
 $paddding-circle: 8px 10.5px;
 
@@ -79,7 +81,11 @@ $paddding-circle: 8px 10.5px;
     padding: $margin-xxxxl 0px;
     max-width: $sizeDesktopLG;
     margin: 0 auto;
-    gap: $margin-lg;
+    gap: $margin-xl;
+    @include for-phone-only() {
+      padding: $margin-xxl 0px;
+      gap: $margin-lg;
+    }
     .portfolio {
       position: relative;
       width: $width-portfolio-desktop;
@@ -87,6 +93,10 @@ $paddding-circle: 8px 10.5px;
       border: 0.5px solid $color-white;
       box-shadow: $shadow-portfolio;
       border-radius: $border-radiou-xs;
+      @include for-phone-only() {
+        width: $width-portfolio-mobile;
+        height: $height-portfolio-mobile;
+      }
       a {
         text-decoration: none;
         img {
