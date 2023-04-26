@@ -34,6 +34,15 @@ const PorfolioPage = (props: Props) => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   const filterClients = getFilterClients(selectedCategory, clients);
+
+  const [showModal, setShowModal] = useState(false);
+  const [selectedClient, setSelectedClient] = useState(null);
+
+  const handleShowModal = (client: any) => {
+    setSelectedClient(client);
+    setShowModal(true);
+  };
+
   return (
     <div className="portfolio-section">
       <h2>PORTFOLIO</h2>
@@ -61,17 +70,46 @@ const PorfolioPage = (props: Props) => {
       </div>
       <div className="portfolios-container">
         {filterClients.map((client) => (
-          <div className="portfolio" key={client.id}>
-            <a href={client.link} target="_blank" rel="noopener noreferrer">
-              <MainImage src={client.image.url} alt={client.image.description} />
-              <div className="title-container">
-                <h3>{client.title}</h3>
-                <h4>{client.description}</h4>
-              </div>
-              <div className="overlay"></div>
-            </a>
+          <div
+            className="portfolio"
+            key={client.id}
+            role="button"
+            tabIndex={0}
+            onClick={() => handleShowModal(client)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                handleShowModal(client);
+              }
+            }}>
+            <MainImage src={client.image.url} alt={client.image.description} />
+            <div className="title-container">
+              <h3>{client.title}</h3>
+              <h4>{client.description}</h4>
+            </div>
+            <div className="overlay"></div>
           </div>
         ))}
+        {showModal && selectedClient && (
+          <div className="modal-container">
+            <div className="modal">
+              <div className="row-container">
+                <h3>{selectedClient.title}</h3>
+                <button
+                  className="btn-closed-modal"
+                  onClick={() => {
+                    setSelectedClient(null);
+                    setShowModal(false);
+                  }}>
+                  X
+                </button>
+              </div>
+              <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
+                <MainImage src={selectedClient.image.url} alt={selectedClient.image.description} />
+                <h4>{selectedClient.description}</h4>
+              </a>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
