@@ -103,7 +103,7 @@ const PorfolioPage = (props: Props) => {
                   X
                 </button>
               </div>
-              <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
+              <a href={selectedClient.link} target="_blank" rel="noopener noreferrer">
                 <MainImage src={selectedClient.image.url} alt={selectedClient.image.description} />
                 <h4>{selectedClient.description}</h4>
               </a>
