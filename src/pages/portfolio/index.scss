@@ -124,6 +124,7 @@ $size-title-modal: 40px;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: $border-radiou-xs;
       }
       .title-container {
         position: relative;
@@ -157,6 +158,7 @@ $size-title-modal: 40px;
           #212121 100%
         );
         z-index: 3;
+        border-radius: $border-radiou-xs;
       }
     }
   }

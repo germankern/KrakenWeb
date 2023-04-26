@@ -101,6 +101,7 @@ $line-height-desktop: 30px;
         background-color: $color-dark-212121;
         box-sizing: border-box;
         padding: $margin-md;
+        border-radius: $border-radiou-xs;
         @include for-tablet-md() {
           height: 45%;
           padding: $margin-sm $margin-md;
