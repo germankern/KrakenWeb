@@ -26,7 +26,7 @@ const NavBar = () => {
           <Link to="/our-services" className={isSelected('OUR SERVICES')} onClick={handleClick}>
             OUR SERVICES
           </Link>
-          <Link to="/">
+          <Link to="/" className={isSelected('/')} onClick={handleClick}>
             <MainImage src={LogoNavbar} alt="logo kraken" />
           </Link>
           <Link to="/portfolio" className={isSelected('PORTFOLIO')} onClick={handleClick}>
@@ -36,9 +36,9 @@ const NavBar = () => {
             PROJECT GOTHIKA
           </Link>
         </div>
-        <div className="containerBtnContactUs">
+        <Link to="/our-services" className="containerBtnContactUs" onClick={handleClick}>
           <button className="btnContactUs">Contact Us</button>
-        </div>
+        </Link>
         <div className="hamburguer">
           <Hamburger />
         </div>

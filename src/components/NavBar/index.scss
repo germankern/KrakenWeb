@@ -53,6 +53,7 @@ $pad-btn-contact-us: $margin-xs 40px;
       position: absolute;
       top: $margin-md;
       right: $margin-lg;
+      text-decoration: none;
       .btnContactUs {
         @include font-sm(700);
         font-family: $contact-us-font-family;
