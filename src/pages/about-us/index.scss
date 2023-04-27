@@ -23,6 +23,17 @@ $position-icon-desktop: 42px;
     max-width: 100%;
     width: 100%;
   }
+  .banner-desktop {
+    @include for-tablet-md {
+      display: none;
+    }
+  }
+  .banner-mobile {
+    display: none;
+    @include for-tablet-md {
+      display: flex;
+    }
+  }
   .membersContainer {
     display: flex;
     flex-wrap: wrap;

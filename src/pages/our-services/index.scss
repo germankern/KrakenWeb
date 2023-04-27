@@ -28,6 +28,16 @@ $line-height-desktop: 30px;
     width: 100%;
     height: auto;
     margin-top: -2px;
+    @include for-tablet-md {
+      display: none;
+    }
+  }
+  .banner-mobile {
+    display: none;
+    @include for-tablet-md {
+      display: flex;
+      width: 100%;
+    }
   }
   .services-container {
     display: flex;

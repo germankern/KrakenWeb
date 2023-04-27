@@ -3,6 +3,17 @@
 .heroSection {
   display: flex;
   flex-direction: column;
+  .banner-desktop {
+    @include for-tablet-md {
+      display: none;
+    }
+  }
+  .banner-mobile {
+    display: none;
+    @include for-tablet-md {
+      display: flex;
+    }
+  }
   .textHeroSection {
     display: flex;
     flex-direction: column;

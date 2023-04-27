@@ -5,6 +5,7 @@ import get from 'lodash/get';
 import { StudioHead } from '../../interfaces';
 import './index.scss';
 import BannerAboutUs from '../../assets/images/BannerAboutUs.png';
+import BannerAboutUsMobile from '../../assets/images/BannerAboutUsMobile.png';
 import LinkedinMembers from '../../assets/images/LinkedinMembers.svg';
 
 const AboutUsPage = (props: Props) => {
@@ -12,7 +13,16 @@ const AboutUsPage = (props: Props) => {
 
   return (
     <div className="about-us">
-      <MainImage src={BannerAboutUs} alt="banner de seccion sobre nosotros" />
+      <MainImage
+        className="banner-desktop"
+        src={BannerAboutUs}
+        alt="banner de seccion sobre nosotros"
+      />
+      <MainImage
+        className="banner-mobile"
+        src={BannerAboutUsMobile}
+        alt="banner de seccion sobre nosotros"
+      />
       <div className="membersContainer">
         {studioHeads.map((member) => (
           <div className="member" key={member.id}>
