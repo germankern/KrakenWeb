@@ -17,11 +17,9 @@ const Hamburger = () => {
     <>
       <div className={showHamburger ? 'showHamburger' : 'hamburger'}>
         <div className="containerHamburger">
-          <MainImage
-            className="logoHamburger"
-            src={HamburgerLogo}
-            alt="logo de kraken en menu hamburguesa"
-          />
+          <Link to="/" className="logoHamburger">
+            <MainImage src={HamburgerLogo} alt="logo de kraken en menu hamburguesa" />
+          </Link>
           <MainImage
             src={showHamburger ? HamburgerClose : HamburgerIcon}
             alt="icono representativo a menu hamburguesa"
