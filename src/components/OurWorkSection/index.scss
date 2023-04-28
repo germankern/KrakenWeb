@@ -35,7 +35,7 @@ $max-width-carrousel: 1366px;
       .slider {
         display: flex;
         position: relative;
-        right: $margin-rigth-carrousel;
+        transform: translateX(-$margin-rigth-carrousel);
         cursor: grab;
         .link {
           cursor: grab;
