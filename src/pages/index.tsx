@@ -7,6 +7,7 @@ import OurWorkSection from '../components/OurWorkSection';
 import { Company, OurWork } from '../interfaces';
 import './index.scss';
 import WorkWithSection from '../components/WorkWithSection';
+import HomeAboutUs from '../components/HomeAboutUs';
 
 const HomePage = (props: Props) => {
   const works: OurWork[] = get(props, 'data.allContentfulOurWork.nodes');
@@ -16,6 +17,7 @@ const HomePage = (props: Props) => {
     <div className="home-container">
       <HeroSection />
       <WorkWithSection companies={companies} />;
+      <HomeAboutUs />
       <OurWorkSection works={works} />;
     </div>
   );
