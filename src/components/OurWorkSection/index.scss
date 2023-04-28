@@ -5,50 +5,55 @@ $size-img-mobile: 18rem;
 $margin-rigth-carrousel: 10rem;
 $max-width-carrousel: 1366px;
 
-.our-work {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  padding: $margin-md;
-  img {
-    width: 100%;
-    height: auto;
-    @include for-tablet-only {
-      width: 70%;
-    }
-  }
-}
-.width-container {
+.container-section {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  max-width: $max-width-carrousel;
-  overflow-x: hidden;
-  padding: $margin-xs;
-  .slider-container {
+  padding-bottom: $margin-lg;
+  .our-work {
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
+    padding: $margin-md;
+    img {
+      width: 100%;
+      height: auto;
+      @include for-tablet-only {
+        width: 70%;
+      }
+    }
+  }
+  .width-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: $margin-xs;
+    max-width: $max-width-carrousel;
     overflow-x: hidden;
-    .slider {
-      display: flex;
-      position: relative;
-      right: $margin-rigth-carrousel;
-      cursor: grab;
-      .link {
+    .slider-container {
+      margin: 0 auto;
+      overflow-x: hidden;
+      .slider {
+        display: flex;
+        position: relative;
+        transform: translateX(-$margin-rigth-carrousel);
         cursor: grab;
-        -webkit-user-drag: none;
-        pointer-events: auto;
-        .item {
-          width: $size-img-desktop;
-          height: $size-img-desktop;
-          padding: $margin-xs;
-          @include for-tablet-only {
-            max-width: $size-img-mobile;
-            max-height: $size-img-mobile;
-          }
-          img {
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
+        .link {
+          cursor: grab;
+          -webkit-user-drag: none;
+          pointer-events: auto;
+          .item {
+            width: $size-img-desktop;
+            height: $size-img-desktop;
+            padding: $margin-xs;
+            @include for-tablet-only {
+              max-width: $size-img-mobile;
+              max-height: $size-img-mobile;
+            }
+            img {
+              width: 100%;
+              height: 100%;
+              pointer-events: none;
+            }
           }
         }
       }

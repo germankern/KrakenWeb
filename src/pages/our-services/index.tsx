@@ -5,6 +5,7 @@ import get from 'lodash/get';
 import { Service } from '../../interfaces';
 import './index.scss';
 import BannerOurServices from '../../assets/images/BannerOurServices.png';
+import BannerOurServicesMobile from '../../assets/images/BannerOurServicesMobile.png';
 import IconService from '../../assets/images/IconService.svg';
 
 const OurServicesPage = (props: Props) => {
@@ -15,6 +16,11 @@ const OurServicesPage = (props: Props) => {
       <MainImage
         className="banner-our-services"
         src={BannerOurServices}
+        alt="banner de seccion our services"
+      />
+      <MainImage
+        className="banner-mobile"
+        src={BannerOurServicesMobile}
         alt="banner de seccion our services"
       />
       <div className="services-container">

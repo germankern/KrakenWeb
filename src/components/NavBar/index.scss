@@ -3,6 +3,7 @@
 $overline-nav: 0.375rem; //6px
 $max-height-nav: 5rem;
 $font-contact-us: 13px;
+$pad-btn-contact-us: $margin-xs 40px;
 
 .containerNavbar,
 .containerBtnContactUs {
@@ -52,11 +53,12 @@ $font-contact-us: 13px;
       position: absolute;
       top: $margin-md;
       right: $margin-lg;
+      text-decoration: none;
       .btnContactUs {
         @include font-sm(700);
         font-family: $contact-us-font-family;
         font-size: $font-contact-us;
-        padding: $margin-xs $margin-lg;
+        padding: $pad-btn-contact-us;
         color: $color-blue;
         background: $color-white;
         box-shadow: $box-shadow-xs rgba(0, 0, 0, 0.25);
@@ -86,14 +88,10 @@ $font-contact-us: 13px;
     .navbar {
       .containerNavbar {
         gap: $margin-sm;
-        a {
-          font-size: $font-size-sm;
-        }
       }
       .containerBtnContactUs {
-        right: $margin-sm;
+        right: $margin-md;
         .btnContactUs {
-          font-size: $font-size-xs;
           padding: $margin-xs $margin-sm;
         }
       }

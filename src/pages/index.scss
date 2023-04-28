@@ -1,10 +1,9 @@
 @import '../styles/theme.scss';
 
 .home-container {
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
-  overflow: hidden;
   height: 100%;
   width: 100%;
   background: url('../assets/images/HomeBackgroundKraken.svg'),
@@ -14,4 +13,7 @@
   background-size: 100vw 290vw;
   background-position: center center;
   aspect-ratio: 0.32;
+  overflow: hidden;
+  min-height: 100vh;
+  min-width: 100vw;
 }
