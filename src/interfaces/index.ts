@@ -51,4 +51,12 @@ export interface PortfolioClient {
   categories: string[] | null;
 }
 
+export interface AboutHome {
+  id: string;
+  order: number;
+  title: ImageAsset;
+  image: ImageAsset;
+  description: string;
+}
+
 export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl';

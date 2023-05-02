@@ -1,12 +1,13 @@
 import React from 'react';
 import './index.scss';
 import { MainImage } from 'gatsby-plugin-image';
+import { AboutHome, OurWork } from '../../interfaces';
 import WeAreKraken from '../../assets/images/WeAreKraken.png';
 import WhatWeDo from '../../assets/images/WhatWeDo.png';
 import Helmet from '../../assets/images/Helmet.png';
 import Warrior from '../../assets/images/Warrior.png';
 
-const HomeAboutUs = () => {
+const HomeAboutUs = ({ aboutHome }: Props) => {
   return (
     <>
       <div className="container-au-home">
@@ -48,5 +49,9 @@ const HomeAboutUs = () => {
     </>
   );
 };
+
+interface Props {
+  aboutHome: AboutHome[];
+}
 
 export default HomeAboutUs;
