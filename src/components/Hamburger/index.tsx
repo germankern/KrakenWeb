@@ -11,6 +11,8 @@ const Hamburger = () => {
 
   const toggleLinks = () => {
     setShowHamburger(!showHamburger);
+    const body = document.querySelector('body');
+    body.classList.toggle('no-scroll');
   };
 
   return (

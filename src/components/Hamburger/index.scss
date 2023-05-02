@@ -3,6 +3,7 @@
 $border-btn: 1px solid #494949;
 $width-btn: 18rem;
 $radius-contact: 6px;
+$color-project-gothika: #5e12b2;
 
 .hamburger {
   background-color: $color-dark-blue;
@@ -59,6 +60,9 @@ $radius-contact: 6px;
       width: $width-btn;
       padding: $margin-md $margin-sm;
     }
+    :nth-child(4) {
+      color: $color-project-gothika;
+    }
     :last-child {
       @include font-lg(700);
       font-family: $nav-font-family;
@@ -76,4 +80,7 @@ $radius-contact: 6px;
   .hamburger {
     display: none;
   }
+}
+.no-scroll {
+  overflow: hidden;
 }

@@ -78,6 +78,14 @@ $font-lato: 'Lato', 'sans-serif';
   line-height: 28px;
 }
 
+@mixin font-sansPro-content($weight: 400) {
+  font-family: $nav-font-family;
+  font-weight: $weight;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 38px;
+}
+
 @mixin font-md($weight: 400) {
   font-family: $main-font-family;
   font-weight: $weight;

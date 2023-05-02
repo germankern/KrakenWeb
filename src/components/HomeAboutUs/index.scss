@@ -1,0 +1,58 @@
+@import '../../styles/theme.scss';
+
+.container-au-home {
+  display: flex;
+  flex-direction: column;
+  margin: $margin-xxl auto;
+  max-width: $sizeDesktopLG;
+  width: 100%;
+  .title {
+    display: flex;
+    justify-content: center;
+    padding: $margin-sm;
+    margin-top: $margin-lg;
+    @include for-phone-only() {
+      img {
+        width: 80%;
+      }
+    }
+  }
+  .colums {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .rows {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: $sizeDesktop;
+      padding: $margin-sm;
+      padding-top: 0px;
+      @include for-tablet-only() {
+        flex-wrap: wrap;
+      }
+      img {
+        max-width: 38%;
+        @include for-tablet-only() {
+          max-width: 80%;
+        }
+      }
+      h4 {
+        @include font-sansPro-content(600);
+        color: $color-white;
+        margin: 0;
+        padding: 0px $margin-xs 0px $margin-lg;
+        @include for-tablet-only() {
+          font-size: $font-size-md;
+          text-align: center;
+          padding: $margin-xs;
+          width: 80%;
+        }
+        @include for-tablet-md() {
+          padding: $margin-xs;
+          width: 95%;
+        }
+      }
+    }
+  }
+}
