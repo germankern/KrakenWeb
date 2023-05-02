@@ -1,6 +1,8 @@
 @import '../../styles/theme.scss';
 
 $padding-desktopLG-up: $margin-sm 5rem $margin-sm 5rem;
+$width-img-mobile: 390px;
+$heigth-img-mobile: 300px;
 
 .container-internal-project-home {
   display: flex;
@@ -46,8 +48,8 @@ $padding-desktopLG-up: $margin-sm 5rem $margin-sm 5rem;
           width: 100%;
         }
         @include for-tablet-md() {
-          width: 390px;
-          height: 300px;
+          width: $width-img-mobile;
+          height: $heigth-img-mobile;
           object-fit: cover;
           margin: 0 auto;
         }
