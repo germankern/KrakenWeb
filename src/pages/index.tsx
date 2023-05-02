@@ -32,6 +32,9 @@ interface Props {
     allContentfulCompany: {
       nodes: Company[];
     };
+    allContentfulAboutHome: {
+      edges: AboutHome[];
+    };
   };
 }
 
