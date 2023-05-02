@@ -33,6 +33,9 @@ $padding-desktopLG-up: $margin-sm 5rem $margin-sm 5rem;
         flex-wrap: wrap;
         padding: $margin-sm;
       }
+      @include for-tablet-md() {
+        padding: $margin-xs 0px $margin-xs 0px;
+      }
       img {
         max-width: 100%;
         width: 100%;
@@ -41,6 +44,12 @@ $padding-desktopLG-up: $margin-sm 5rem $margin-sm 5rem;
         }
         @include for-tablet-only() {
           width: 100%;
+        }
+        @include for-tablet-md() {
+          width: 390px;
+          height: 300px;
+          object-fit: cover;
+          margin: 0 auto;
         }
       }
       h4 {
