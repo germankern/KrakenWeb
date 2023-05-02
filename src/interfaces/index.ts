@@ -59,4 +59,12 @@ export interface AboutHome {
   description: string;
 }
 
+export interface TheInternalProject {
+  id: string;
+  order: number;
+  title: ImageAsset;
+  image: ImageAsset;
+  description: string;
+}
+
 export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl';

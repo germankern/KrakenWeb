@@ -4,15 +4,20 @@ import { graphql } from 'gatsby';
 import get from 'lodash/get';
 import HeroSection from '../components/HeroSection';
 import OurWorkSection from '../components/OurWorkSection';
-import { AboutHome, Company, OurWork } from '../interfaces';
+import { AboutHome, Company, OurWork, TheInternalProject } from '../interfaces';
 import './index.scss';
 import WorkWithSection from '../components/WorkWithSection';
 import HomeAboutUs from '../components/HomeAboutUs';
+import InternalProjectContainer from '../components/InternalProjectContainer';
 
 const HomePage = (props: Props) => {
   const works: OurWork[] = get(props, 'data.allContentfulOurWork.nodes');
   const companies: Company[] = get(props, 'data.allContentfulCompany.nodes');
   const aboutHome: AboutHome[] = get(props, 'data.allContentfulAboutHome.edges');
+  const internalProject: TheInternalProject[] = get(
+    props,
+    'data.allContentfulTheInternalProject.edges'
+  );
 
   return (
     <div className="home-container">
@@ -20,6 +25,7 @@ const HomePage = (props: Props) => {
       <WorkWithSection companies={companies} />;
       <HomeAboutUs aboutHome={aboutHome} />
       <OurWorkSection works={works} />;
+      <InternalProjectContainer internalProject={internalProject} />
     </div>
   );
 };
@@ -34,6 +40,9 @@ interface Props {
     };
     allContentfulAboutHome: {
       edges: AboutHome[];
+    };
+    allContentfulInternalProject: {
+      edges: TheInternalProject[];
     };
   };
 }
@@ -76,6 +85,29 @@ export const pageQuery = graphql`
         node {
           order
           id
+          title {
+            url
+            width
+            height
+            description
+          }
+          image {
+            url
+            width
+            height
+            description
+          }
+          description {
+            description
+          }
+        }
+      }
+    }
+    allContentfulTheInternalProject {
+      edges {
+        node {
+          id
+          order
           title {
             url
             width
