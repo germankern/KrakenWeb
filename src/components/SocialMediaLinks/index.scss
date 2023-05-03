@@ -19,6 +19,10 @@ $width-networks: 40px;
     color: $color-white;
     text-align: center;
     margin: $margin-md;
+    @include for-tablet-md() {
+      font-size: $font-size-xl;
+      margin: 0px;
+    }
   }
   .links-media {
     display: flex;
@@ -27,6 +31,10 @@ $width-networks: 40px;
     gap: $margin-lg;
     background: $color-bg-dark-blue;
     padding: $margin-lg;
+    @include for-tablet-md() {
+      padding: $margin-md;
+      justify-content: space-around;
+    }
     @include for-desktopLG-up() {
       gap: $margin-xxl;
     }
@@ -36,6 +44,9 @@ $width-networks: 40px;
         justify-content: center;
         width: $width-networks;
         height: auto;
+        @include for-tablet-md() {
+          width: $font-size-xl;
+        }
       }
     }
   }
