@@ -1,0 +1,42 @@
+@import '../../styles/theme.scss';
+
+@mixin font-reach-social($weight: 800) {
+  font-family: $hamburger-font-family;
+  font-weight: $weight;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+$width-networks: 40px;
+
+.social-media-container {
+  display: flex;
+  flex-direction: column;
+  margin: $margin-xxxxl 0px;
+  h4 {
+    @include font-reach-social(800);
+    color: $color-white;
+    text-align: center;
+    margin: $margin-md;
+  }
+  .links-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $margin-lg;
+    background: $color-bg-dark-blue;
+    padding: $margin-lg;
+    @include for-desktopLG-up() {
+      gap: $margin-xxl;
+    }
+    a {
+      img {
+        display: flex;
+        justify-content: center;
+        width: $width-networks;
+        height: auto;
+      }
+    }
+  }
+}

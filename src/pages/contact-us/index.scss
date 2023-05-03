@@ -1,0 +1,36 @@
+@import '../../styles/theme.scss';
+
+.contact-us {
+  flex: 1;
+  background: url('../../assets/images/OurServicesBackground.svg'),
+    linear-gradient(180deg, rgba(20, 0, 40, 0) 37.74%, #031023 100%);
+  background-blend-mode: soft-light, normal;
+  background-repeat: repeat-y;
+  background-size: 100vw 142vw;
+  background-position: center center;
+  background-color: $color-bg-dark-blue;
+  .banner-desktop,
+  .banner-mobile {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+  }
+  .banner-desktop {
+    @include for-tablet-md {
+      display: none;
+    }
+  }
+  .banner-mobile {
+    display: none;
+    @include for-tablet-md {
+      display: flex;
+    }
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    h2 {
+      color: red;
+    }
+  }
+}

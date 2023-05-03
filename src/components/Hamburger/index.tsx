@@ -41,7 +41,7 @@ const Hamburger = () => {
           <Link to="/" onClick={toggleLinks}>
             PROJECT GOTHIKA
           </Link>
-          <Link to="/" onClick={toggleLinks}>
+          <Link to="/contact-us" onClick={toggleLinks}>
             Contact Us
           </Link>
         </div>

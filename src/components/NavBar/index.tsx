@@ -36,7 +36,7 @@ const NavBar = () => {
             PROJECT GOTHIKA
           </Link>
         </div>
-        <Link to="/our-services" className="containerBtnContactUs" onClick={handleClick}>
+        <Link to="/contact-us" className="containerBtnContactUs" onClick={handleClick}>
           <button className="btnContactUs">Contact Us</button>
         </Link>
         <div className="hamburguer">
