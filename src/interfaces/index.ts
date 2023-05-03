@@ -67,4 +67,12 @@ export interface TheInternalProject {
   description: string;
 }
 
+export interface OurTeam {
+  id: string;
+  order: number;
+  title: ImageAsset;
+  image: ImageAsset;
+  description: string;
+}
+
 export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl';

@@ -2,15 +2,16 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { MainImage } from 'gatsby-plugin-image';
 import get from 'lodash/get';
-import { StudioHead } from '../../interfaces';
+import { OurTeam, StudioHead } from '../../interfaces';
 import './index.scss';
 import BannerAboutUs from '../../assets/images/BannerAboutUs.png';
 import BannerAboutUsMobile from '../../assets/images/BannerAboutUsMobile.png';
 import LinkedinMembers from '../../assets/images/LinkedinMembers.svg';
+import OurTeamContainer from '../../components/OurTeamContainer';
 
 const AboutUsPage = (props: Props) => {
   const studioHeads: StudioHead[] = get(props, 'data.allContentfulStudioHead.nodes');
-
+  const ourTeam: OurTeam[] = get(props, 'data.allContentfulOurTeam.edges');
   return (
     <div className="about-us">
       <MainImage
@@ -45,6 +46,7 @@ const AboutUsPage = (props: Props) => {
           </div>
         ))}
       </div>
+      <OurTeamContainer ourTeam={ourTeam} />
     </div>
   );
 };
@@ -53,6 +55,9 @@ interface Props {
   data: {
     allContentfulStudioHead: {
       nodes: StudioHead[];
+    };
+    allContentfulOurTeam: {
+      edges: OurTeam[];
     };
   };
 }
@@ -76,6 +81,29 @@ export const pageQuery = graphql`
           width
           title
           description
+        }
+      }
+    }
+    allContentfulOurTeam {
+      edges {
+        node {
+          id
+          order
+          title {
+            url
+            width
+            height
+            description
+          }
+          image {
+            url
+            width
+            height
+            description
+          }
+          description {
+            description
+          }
         }
       }
     }
