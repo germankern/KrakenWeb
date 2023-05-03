@@ -4,6 +4,7 @@ import { MainImage } from 'gatsby-plugin-image';
 import BannerContactUs from '../../assets/images/BannerContactUs.png';
 import BannerContactUsMobile from '../../assets/images/BannerContactUsMobile.png';
 import SocialMediaLinks from '../../components/SocialMediaLinks';
+import Form from '../../components/Form';
 
 const ContactUsPage = () => {
   return (
@@ -18,9 +19,7 @@ const ContactUsPage = () => {
         src={BannerContactUsMobile}
         alt="banner seccion de contacto"
       />
-      <div className="content">
-        <h2>Contacto</h2>
-      </div>
+      <Form />
       <SocialMediaLinks />
     </div>
   );

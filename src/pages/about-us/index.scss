@@ -5,7 +5,6 @@ $height-member-container: 15rem;
 $height-member-container-mobile: 20rem;
 $width-member-img-mobile: 9rem;
 $width-icon-mobile: 5.5rem;
-$shadow-member: 0px 0px 50px 5px;
 $position-icon-mobile: 36px;
 $position-icon-desktop: 42px;
 
@@ -51,7 +50,7 @@ $position-icon-desktop: 42px;
         max-width: 100%;
         border-radius: 50%;
         background: $color-grey-02;
-        box-shadow: $shadow-member $color-white-025;
+        box-shadow: $box-shadow-container50 $color-white-025;
         img {
           width: auto;
         }
