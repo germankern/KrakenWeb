@@ -10,6 +10,7 @@
 
 $max-width-input-row: 420px;
 $max-width-input-column: 360px;
+$width-input-mobile: 324px;
 $max-width-btn: 855px;
 $max-height-input: 32px;
 $max-height-btn: 63px;
@@ -20,6 +21,9 @@ $border-2px-btn: 2px solid $color-blue;
 
 .form-container {
   padding: $margin-xxxxl $margin-lg;
+  @include for-tablet-md() {
+    padding: $margin-xxl $margin-sm;
+  }
   .form {
     display: flex;
     justify-content: center;
@@ -33,6 +37,9 @@ $border-2px-btn: 2px solid $color-blue;
     border-radius: $border-radiou-sm;
     box-shadow: $box-shadow-container50 $color-white-025;
     padding: $margin-xl $margin-lg;
+    @include for-tablet-md() {
+      background-color: #031023;
+    }
     input {
       @include font-lg-inputs-form(700);
       color: $color-white;
@@ -56,6 +63,9 @@ $border-2px-btn: 2px solid $color-blue;
         max-width: $max-width-input-column;
         width: 45%;
       }
+      @include for-tablet-md() {
+        width: 324px;
+      }
     }
     .last-child {
       max-width: $max-width-btn;
@@ -65,6 +75,9 @@ $border-2px-btn: 2px solid $color-blue;
       }
       @include for-tablet-only() {
         width: 94%;
+      }
+      @include for-tablet-md() {
+        width: 324px;
       }
     }
     .btn-form {
