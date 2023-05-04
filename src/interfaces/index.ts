@@ -75,4 +75,12 @@ export interface OurTeam {
   description: string;
 }
 
+export interface ContactUsRequestProps {
+  name: string;
+  phoneNumber: string;
+  subject: string;
+  email: string;
+  message: string;
+}
+
 export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl';

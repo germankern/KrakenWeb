@@ -9,16 +9,18 @@ function useForm<T>(
 ): {
   formData: T;
   handleChangeFor: (key: string) => (text: string) => void;
-  handleSubmit: () => void;
+  handleSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
 } {
   const [formData, setFormData] = React.useState<T>(initialState);
 
   const handleChangeFor = (key: string) => (text: string) => {
-    setFormData({ ...formData, [key]: text });
+    setFormData({ ...formData, [key]: text.toString() });
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     onSubmit?.(formData);
+    setFormData(initialState);
   };
 
   return { formData, handleChangeFor, handleSubmit };

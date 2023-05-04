@@ -1,48 +1,91 @@
 @import '../../styles/theme.scss';
 
+@mixin font-lg-inputs-form($weight: 700) {
+  font-family: $nav-font-family;
+  font-weight: $weight;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+$max-width-input-row: 420px;
+$max-width-input-column: 360px;
+$max-width-btn: 855px;
+$max-height-input: 32px;
+$max-height-btn: 63px;
+
+$font-input-mobile: 18px;
+
+$border-2px-btn: 2px solid $color-blue;
+
 .form-container {
-  padding: $margin-xxxxl 32px;
+  padding: $margin-xxxxl $margin-lg;
   .form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin: 0 auto;
-    gap: 16px;
+    gap: $margin-sm;
     max-width: calc($sizeDesktop - $margin-xl);
     min-height: calc($sizeTabletSm - $margin-xl);
-    border: 1px solid #ffffff;
-    border-radius: 8px;
+    border: $border-1px-white;
+    border-radius: $border-radiou-sm;
     box-shadow: $box-shadow-container50 $color-white-025;
     padding: $margin-xl $margin-lg;
     input {
+      @include font-lg-inputs-form(700);
+      color: $color-white;
       background-color: transparent;
       border: none;
-      border-bottom: 1px solid $color-white;
-      max-width: 420px;
+      border-bottom: $border-1px-white;
+      max-width: $max-width-input-row;
       width: 100%;
-      height: 32px;
-      font-size: 20px;
-      color: white;
-      font-weight: 700;
+      height: $max-height-input;
+      @include for-tablet-md() {
+        font-size: $font-input-mobile;
+      }
       &::placeholder {
         color: $color-white;
       }
+      @include for-desktop-only() {
+        width: 48%;
+      }
+      @include for-tablet-only() {
+        font-size: $font-input-mobile;
+        max-width: $max-width-input-column;
+        width: 45%;
+      }
     }
     .last-child {
-      max-width: 855px;
+      max-width: $max-width-btn;
       width: 100%;
+      @include for-desktop-only() {
+        width: 98%;
+      }
+      @include for-tablet-only() {
+        width: 94%;
+      }
     }
     .btn-form {
+      @include font-lg-inputs-form($weight: 700);
       background-color: transparent;
-      color: white;
-      width: 855px;
-      max-height: 63px;
-      font-size: 20px;
-      font-weight: 700;
-      border: 2px solid #2c267e;
-      border-radius: 4px;
-      padding: 16px;
+      color: $color-white;
+      width: $max-width-btn;
+      max-height: $max-height-btn;
+      border: $border-2px-btn;
+      border-radius: $border-radiou-xs;
+      padding: $margin-sm;
+      @include for-desktop-only() {
+        width: 98%;
+      }
+      @include for-tablet-only() {
+        font-size: $font-input-mobile;
+        width: 94%;
+      }
+      @include for-tablet-md() {
+        font-size: $font-input-mobile;
+      }
     }
   }
 }

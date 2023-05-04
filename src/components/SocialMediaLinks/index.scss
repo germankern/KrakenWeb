@@ -13,7 +13,7 @@ $width-networks: 40px;
 .social-media-container {
   display: flex;
   flex-direction: column;
-  margin: $margin-xxxxl 0px;
+  padding-bottom: $margin-xxxxl;
   h4 {
     @include font-reach-social(800);
     color: $color-white;
