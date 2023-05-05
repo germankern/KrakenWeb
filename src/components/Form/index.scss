@@ -61,6 +61,11 @@ $bg-form-mobile: #031023;
         padding: $margin-lg $margin-sm;
         gap: $margin-md;
       }
+      input[type='number']::-webkit-inner-spin-button,
+      input[type='number']::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
       input {
         @include font-lg-inputs-form(700);
         color: $color-white;
