@@ -16,17 +16,19 @@ $position-icon-desktop: 42px;
   background-repeat: repeat-y;
   background-size: 100vw 290vw;
   background-position: center center;
-  img {
+  .banner-desktop {
     display: flex;
     max-width: 100%;
     width: 100%;
-  }
-  .banner-desktop {
+    aspect-ratio: 2.73;
     @include for-tablet-md {
       display: none;
     }
   }
   .banner-mobile {
+    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 0.78;
     display: none;
     @include for-tablet-md {
       display: flex;

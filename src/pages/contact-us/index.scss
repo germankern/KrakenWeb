@@ -9,18 +9,19 @@
   background-size: 100vw 142vw;
   background-position: center center;
   background-color: $color-bg-dark-blue;
-  .banner-desktop,
-  .banner-mobile {
+  .banner-desktop {
     display: flex;
     max-width: 100%;
     width: 100%;
-  }
-  .banner-desktop {
+    aspect-ratio: 2.73;
     @include for-tablet-md {
       display: none;
     }
   }
   .banner-mobile {
+    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 0.78;
     display: none;
     @include for-tablet-md {
       display: flex;

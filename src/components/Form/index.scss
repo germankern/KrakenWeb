@@ -18,6 +18,8 @@ $max-height-btn: 63px;
 $font-input-mobile: 18px;
 
 $border-2px-btn: 2px solid $color-blue;
+$border-input-container-mobile: 1px solid #494949;
+$bg-form-mobile: #031023;
 
 .form-container {
   padding: $margin-xxxxl $margin-lg;
@@ -38,46 +40,68 @@ $border-2px-btn: 2px solid $color-blue;
     box-shadow: $box-shadow-container50 $color-white-025;
     padding: $margin-xl $margin-lg;
     @include for-tablet-md() {
-      background-color: #031023;
-    }
-    input {
-      @include font-lg-inputs-form(700);
-      color: $color-white;
-      background-color: transparent;
       border: none;
-      border-bottom: $border-1px-white;
-      max-width: $max-width-input-row;
-      width: 100%;
-      height: $max-height-input;
-      @include for-tablet-md() {
-        font-size: $font-input-mobile;
-      }
-      &::placeholder {
-        color: $color-white;
-      }
-      @include for-desktop-only() {
-        width: 48%;
-      }
-      @include for-tablet-only() {
-        font-size: $font-input-mobile;
-        max-width: $max-width-input-column;
-        width: 45%;
-      }
-      @include for-tablet-md() {
-        width: 324px;
-      }
+      box-shadow: none;
+      padding: 0;
     }
-    .last-child {
-      max-width: $max-width-btn;
-      width: 100%;
-      @include for-desktop-only() {
-        width: 98%;
-      }
-      @include for-tablet-only() {
-        width: 94%;
-      }
+    .layaout-mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      gap: $margin-sm;
+      max-width: calc($sizeDesktop - $margin-xl);
+      min-height: calc($sizeTabletSm - $margin-xl);
       @include for-tablet-md() {
-        width: 324px;
+        background-color: $bg-form-mobile;
+        border: $border-input-container-mobile;
+        border-radius: $border-radiou-sm;
+        box-shadow: $box-shadow-container50 $color-white-025;
+        padding: $margin-lg $margin-sm;
+        gap: $margin-md;
+      }
+      input {
+        @include font-lg-inputs-form(700);
+        color: $color-white;
+        background-color: transparent;
+        border: none;
+        border-bottom: $border-1px-white;
+        max-width: $max-width-input-row;
+        width: 100%;
+        height: $max-height-input;
+        @include for-tablet-md() {
+          font-size: $font-input-mobile;
+        }
+        &::placeholder {
+          color: $color-white;
+        }
+        @include for-desktop-only() {
+          width: 48%;
+        }
+        @include for-tablet-only() {
+          font-size: $font-input-mobile;
+          max-width: $max-width-input-column;
+          width: 45%;
+        }
+        @include for-tablet-md() {
+          max-width: $width-input-mobile;
+          width: 100%;
+        }
+      }
+      .last-child {
+        max-width: $max-width-btn;
+        width: 100%;
+        @include for-desktop-only() {
+          width: 98%;
+        }
+        @include for-tablet-only() {
+          width: 94%;
+        }
+        @include for-tablet-md() {
+          max-width: $width-input-mobile;
+          width: 100%;
+        }
       }
     }
     .btn-form {
@@ -97,7 +121,10 @@ $border-2px-btn: 2px solid $color-blue;
         width: 94%;
       }
       @include for-tablet-md() {
+        width: 100%;
         font-size: $font-input-mobile;
+        background-color: $bg-form-mobile;
+        margin-top: $margin-lg;
       }
     }
   }

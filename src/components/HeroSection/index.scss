@@ -4,11 +4,18 @@
   display: flex;
   flex-direction: column;
   .banner-desktop {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 2.73;
     @include for-tablet-md {
       display: none;
     }
   }
   .banner-mobile {
+    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 0.78;
     display: none;
     @include for-tablet-md {
       display: flex;
