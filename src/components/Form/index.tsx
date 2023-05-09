@@ -4,9 +4,6 @@ import useForm from '../../useForm';
 import { ContactUsRequestProps } from '../../interfaces';
 import formService from '../../services/formService';
 
-// const URL_GOOGLE_SCRIPT =
-//   'https://script.google.com/macros/s/AKfycbzPH4Q87Mm8C4jhesbm5MTNND0DhfHmBN1JyZ-KyUhutHWe4Mfzy8781ydpd43DCvURIw/exec';
-
 const Form = () => {
   const { formData, handleChangeFor, handleSubmit } = useForm<ContactUsRequestProps>(
     formService.postToGoogleScript

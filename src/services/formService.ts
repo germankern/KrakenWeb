@@ -1,5 +1,5 @@
 const URL_GOOGLE_SCRIPT =
-  'https://script.google.com/macros/s/AKfycbzPH4Q87Mm8C4jhesbm5MTNND0DhfHmBN1JyZ-KyUhutHWe4Mfzy8781ydpd43DCvURIw/exec';
+  'https://script.google.com/macros/s/AKfycbzehoVVqi5AnZHbLoIvNZUoL17DeCqem95mQtxhWYekrWovAepLlg2QXrhV7hV-k5kJ/exec';
 
 const postToGoogleScript = (data: any) => {
   console.log('About to send', data);
