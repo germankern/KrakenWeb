@@ -11,7 +11,7 @@ const postToGoogleScript = (data: any) => {
 
   console.log('formData', formData);
 
-  fetch(URL_GOOGLE_SCRIPT, {
+  return fetch(URL_GOOGLE_SCRIPT, {
     method: 'POST',
     body: formData,
     mode: 'no-cors',

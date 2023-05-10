@@ -118,6 +118,7 @@ $bg-form-mobile: #031023;
       border: $border-2px-btn;
       border-radius: $border-radiou-xs;
       padding: $margin-sm;
+      cursor: pointer;
       @include for-desktop-only() {
         width: 98%;
       }

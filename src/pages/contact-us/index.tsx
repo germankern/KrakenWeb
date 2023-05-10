@@ -5,6 +5,7 @@ import BannerContactUs from '../../assets/images/BannerContactUs.png';
 import BannerContactUsMobile from '../../assets/images/BannerContactUsMobile.png';
 import SocialMediaLinks from '../../components/SocialMediaLinks';
 import Form from '../../components/Form';
+import SucessMessage from '../../components/SuccessMessage';
 
 const ContactUsPage = () => {
   return (

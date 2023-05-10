@@ -44,6 +44,7 @@ $box-shadow-xs: 0px 4px 4px;
 $box-shadow-container50: 0px 0px 50px 5px;
 
 $border-1px-white: 1px solid $color-white;
+$border-1px-grey: 1px solid #494949;
 
 $sizePhoneLG: 393px;
 $sizeTabletSm: 426px;
@@ -57,6 +58,14 @@ $contact-us-font-family: 'Merriweather Sans', sans-serif;
 $nav-font-family: 'Source Sans Pro', sans-serif;
 $hamburger-font-family: 'Barlow', sans-serif;
 $font-lato: 'Lato', 'sans-serif';
+
+@mixin font-message-form($size: 40px) {
+  font-family: $nav-font-family;
+  font-weight: 700;
+  font-style: normal;
+  font-size: $size;
+  line-height: 50px;
+}
 
 @mixin font-xxxl($weight: 800) {
   font-family: $hamburger-font-family;
