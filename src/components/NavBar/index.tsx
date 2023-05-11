@@ -32,7 +32,10 @@ const NavBar = () => {
           <Link to="/portfolio" className={isSelected('PORTFOLIO')} onClick={handleClick}>
             PORTFOLIO
           </Link>
-          <Link to="/" className={isSelected('PROJECT GOTHIKA')} onClick={handleClick}>
+          <Link
+            to="/project-gothika"
+            className={isSelected('PROJECT GOTHIKA')}
+            onClick={handleClick}>
             PROJECT GOTHIKA
           </Link>
         </div>

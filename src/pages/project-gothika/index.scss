@@ -1,0 +1,52 @@
+@import '../../styles/theme.scss';
+
+@mixin font-parameter-barlow($size: 40px) {
+  font-family: $hamburger-font-family;
+  font-weight: 800;
+  font-style: normal;
+  font-size: $size;
+  line-height: 48px;
+}
+
+.project-gothika {
+  flex: 1;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    radial-gradient(205.9% 48.06% at 50% 50%, #00053d 0%, #000000 46.35%, #000539 100%);
+  background-blend-mode: soft-light, normal;
+  background-repeat: repeat-y;
+  background-size: 100vw 142vw;
+  background-position: center center;
+  background-color: $color-bg-dark-blue;
+  .banner-desktop {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 2.73;
+    @include for-tablet-md {
+      display: none;
+    }
+  }
+  .banner-mobile {
+    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 0.78;
+    display: none;
+    @include for-tablet-md {
+      display: flex;
+    }
+  }
+  .main-container-project-gothika {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    min-height: 40vh;
+    h2 {
+      @include font-parameter-barlow(40px);
+      color: $color-primary;
+      @include for-tablet-only() {
+        font-size: $font-size-xxl;
+      }
+    }
+  }
+}
