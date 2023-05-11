@@ -3,24 +3,28 @@ import './index.scss';
 import useForm from '../../useForm';
 import { ContactUsRequestProps } from '../../interfaces';
 import formService from '../../services/formService';
-import SucessMessage from '../SuccessMessage';
+import FormSucessMessage from '../FormSuccessMessage';
+import FormFailureMessage from '../FormFailureMessage';
 
 const Form = () => {
   const [formStatus, setFormStatus] = useState<'none' | 'success' | 'failure'>('none');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { formData, handleChangeFor, handleSubmit } = useForm<ContactUsRequestProps>(async () => {
     try {
+      setIsSubmitting(true);
       await formService.postToGoogleScript(formData);
       setFormStatus('success');
     } catch (error) {
       setFormStatus('failure');
+    } finally {
+      setIsSubmitting(false);
     }
   });
 
   return (
     <div className="form-container">
-      {formStatus === 'success' && <SucessMessage />}
-      {formStatus === 'failure' && <h3>Failed Send</h3>}
+      {formStatus === 'success' && <FormSucessMessage />}
+      {formStatus === 'failure' && <FormFailureMessage />}
       {!isSubmitting && formStatus === 'none' && (
         <form className="form" onSubmit={handleSubmit}>
           <div className="layaout-mobile">

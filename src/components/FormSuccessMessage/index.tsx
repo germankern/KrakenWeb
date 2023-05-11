@@ -3,7 +3,7 @@ import './index.scss';
 import { MainImage } from 'gatsby-plugin-image';
 import CheckSuccess from '../../assets/images/CheckSuccess.png';
 
-const SucessMessage = () => {
+const FormSucessMessage = () => {
   return (
     <div className="layaout-container">
       <div className="success-message-container">
@@ -15,4 +15,4 @@ const SucessMessage = () => {
   );
 };
 
-export default SucessMessage;
+export default FormSucessMessage;

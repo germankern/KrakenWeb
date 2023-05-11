@@ -1,0 +1,108 @@
+@import '../../styles/theme.scss';
+
+$width-mobile-icon: 90px;
+$font-30px: 30px;
+$line-heigth-38px: 38px;
+
+.layaout-container {
+  padding: $margin-xxl 0px;
+  @include for-tablet-md() {
+    padding: 0px;
+  }
+  .failure-message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: $color-white-05;
+    color: $color-white;
+    max-width: calc($sizeDesktop - $margin-xxl);
+    width: auto;
+    padding: $margin-xl $margin-lg;
+    border: $border-1px-white;
+    box-shadow: $box-shadow-container50 $color-white-025;
+    border-radius: $border-radiou-sm;
+    @include for-tablet-only() {
+      padding: $margin-lg;
+    }
+    @include for-tablet-md() {
+      border: none;
+      box-shadow: none;
+      padding: 0;
+      background-color: transparent;
+    }
+    .layaout-mobile-failure {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      max-width: calc($sizeDesktop - $margin-xxl);
+      width: 80%;
+      @include for-tablet-md() {
+        padding: $margin-xl $margin-lg;
+        border: $border-1px-grey;
+        border-radius: $border-radiou-sm;
+        box-shadow: $box-shadow-container50 $color-white-025;
+      }
+      img {
+        @include for-tablet-md() {
+          max-width: $width-mobile-icon;
+          padding: 0;
+        }
+      }
+      h3 {
+        @include font-message-form(40px);
+        margin: $margin-md 0px;
+        @include for-tablet-only() {
+          font-size: $font-size-xxl;
+          margin: $margin-sm 0px;
+        }
+        @include for-tablet-md() {
+          font-size: $font-30px;
+        }
+      }
+      h4 {
+        @include font-message-form($font-30px);
+        line-height: $line-heigth-38px;
+        margin: $margin-sm 0px;
+        text-align: center;
+        @include for-tablet-only() {
+          font-size: $font-size-lg;
+          line-height: $margin-lg;
+          margin: 0;
+        }
+        @include for-tablet-md() {
+          font-size: $font-size-sm;
+        }
+      }
+    }
+    .btn-reset-form {
+      @include font-lg-inputs-form($weight: 700);
+      text-decoration: none;
+      text-align: center;
+      background-color: transparent;
+      color: $color-white;
+      width: $max-width-btn;
+      max-height: $max-height-btn;
+      border: $border-2px-btn;
+      border-radius: $border-radiou-xs;
+      padding: $margin-sm;
+      margin: $margin-sm 0px $margin-xs 0px;
+      cursor: pointer;
+      @include for-desktop-only() {
+        width: 98%;
+      }
+      @include for-tablet-only() {
+        font-size: $font-input-mobile;
+        width: 94%;
+      }
+      @include for-tablet-md() {
+        width: calc(80% + 30px);
+        font-size: $font-input-mobile;
+        background-color: $bg-form-mobile;
+        margin: $margin-lg 0px 0px 0px;
+      }
+    }
+  }
+}

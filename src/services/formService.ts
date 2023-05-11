@@ -14,7 +14,7 @@ const postToGoogleScript = (data: any) => {
   return fetch(URL_GOOGLE_SCRIPT, {
     method: 'POST',
     body: formData,
-    mode: 'no-cors',
+    mode: 'cors',
   });
 };
 
