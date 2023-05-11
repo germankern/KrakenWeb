@@ -76,11 +76,11 @@ export interface OurTeam {
 }
 
 export interface ContactUsRequestProps {
-  name: string;
-  phoneNumber: string;
-  subject: string;
-  email: string;
-  message: string;
+  Name: string;
+  PhoneNumber: string;
+  Subject: string;
+  Email: string;
+  Message: string;
 }
 
 export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl';

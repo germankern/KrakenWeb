@@ -33,16 +33,7 @@ $pad-btn-contact-us: $margin-xs 40px;
       :hover {
         text-decoration: none;
         color: $color-primary;
-        transition: 500ms;
-      }
-      :hover::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: -$margin-md;
-        height: $overline-nav;
-        background-color: $color-primary;
+        transition: 400ms;
       }
       a img {
         padding: 0px $margin-xxs;
@@ -63,6 +54,7 @@ $pad-btn-contact-us: $margin-xs 40px;
         background: $color-white;
         box-shadow: $box-shadow-xs rgba(0, 0, 0, 0.25);
         border-radius: $border-radiou-sm;
+        cursor: pointer;
       }
     }
   }

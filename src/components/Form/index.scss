@@ -1,25 +1,9 @@
 @import '../../styles/theme.scss';
 
-@mixin font-lg-inputs-form($weight: 700) {
-  font-family: $nav-font-family;
-  font-weight: $weight;
-  font-style: normal;
-  font-size: 20px;
-  line-height: 25px;
-}
-
 $max-width-input-row: 420px;
 $max-width-input-column: 360px;
 $width-input-mobile: 324px;
-$max-width-btn: 855px;
 $max-height-input: 32px;
-$max-height-btn: 63px;
-
-$font-input-mobile: 18px;
-
-$border-2px-btn: 2px solid $color-blue;
-$border-input-container-mobile: 1px solid #494949;
-$bg-form-mobile: #031023;
 
 .form-container {
   padding: $margin-xxxxl $margin-lg;
@@ -55,7 +39,7 @@ $bg-form-mobile: #031023;
       min-height: calc($sizeTabletSm - $margin-xl);
       @include for-tablet-md() {
         background-color: $bg-form-mobile;
-        border: $border-input-container-mobile;
+        border: $border-1px-grey;
         border-radius: $border-radiou-sm;
         box-shadow: $box-shadow-container50 $color-white-025;
         padding: $margin-lg $margin-sm;
@@ -118,6 +102,7 @@ $bg-form-mobile: #031023;
       border: $border-2px-btn;
       border-radius: $border-radiou-xs;
       padding: $margin-sm;
+      cursor: pointer;
       @include for-desktop-only() {
         width: 98%;
       }
