@@ -9,8 +9,6 @@ const postToGoogleScript = (data: any) => {
     formData.append(key, data[key]);
   }
 
-  console.log('formData', formData);
-
   return fetch(URL_GOOGLE_SCRIPT, {
     method: 'POST',
     body: formData,
