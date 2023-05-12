@@ -1,12 +1,12 @@
 import React from 'react';
 import './index.scss';
-import Logo from '../../assets/images/KrakenLogo.png';
-import Mail from '../../assets/images/Mail.png';
-import Instagram from '../../assets/images/Instagram.png';
-import Twitter from '../../assets/images/Twitter.png';
-import Facebook from '../../assets/images/Facebook.png';
-import Linkedin from '../../assets/images/Linkedin.png';
-import WhatsApp from '../../assets/images/WhatsApp.png';
+import Logo from '../../assets/images/KrakenLogo.svg';
+import Mail from '../../assets/images/Mail.svg';
+import Instagram from '../../assets/images/Instagram.svg';
+import Twitter from '../../assets/images/Twitter.svg';
+import Facebook from '../../assets/images/Facebook.svg';
+import Linkedin from '../../assets/images/Linkedin.svg';
+import WhatsApp from '../../assets/images/WhatsApp.svg';
 import { MainImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
 

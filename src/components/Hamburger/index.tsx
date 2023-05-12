@@ -35,10 +35,14 @@ const Hamburger = () => {
           <Link to="/our-services" onClick={toggleLinks}>
             OUR SERVICES
           </Link>
-          <Link to="/portfolio" onClick={toggleLinks}>
+          <Link
+            to="https://www.artstation.com/krakencreativestudios"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={toggleLinks}>
             PORTFOLIO
           </Link>
-          <Link to="/" onClick={toggleLinks}>
+          <Link to="/project-gothika" onClick={toggleLinks}>
             PROJECT GOTHIKA
           </Link>
           <Link to="/contact-us" onClick={toggleLinks}>
