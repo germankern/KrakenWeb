@@ -64,7 +64,12 @@ const NavBar = () => {
           <Link to="/" className={isSelected('/')} onClick={handleClick}>
             <MainImage src={LogoNavbar} alt="logo kraken" />
           </Link>
-          <Link to="/portfolio" className={isSelected('PORTFOLIO')} onClick={handleClick}>
+          <Link
+            to="https://www.artstation.com/krakencreativestudios"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={isSelected('PORTFOLIO')}
+            onClick={handleClick}>
             PORTFOLIO
           </Link>
           <Link
