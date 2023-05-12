@@ -39,7 +39,7 @@ $position-icon-desktop: 42px;
     flex-wrap: wrap;
     justify-content: space-evenly;
     max-width: $sizeDesktopLG;
-    margin: $margin-xxxxl auto;
+    margin: $margin-xxl auto;
     .member {
       display: flex;
       align-items: center;
@@ -103,7 +103,7 @@ $position-icon-desktop: 42px;
 @include for-tablet-md() {
   .about-us {
     .membersContainer {
-      margin: $margin-xxl auto;
+      margin: $margin-lg auto;
       .member {
         height: $height-member-container-mobile;
         margin: $margin-sm $margin-xs;

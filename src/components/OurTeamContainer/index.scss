@@ -13,6 +13,9 @@ $heigth-img-mobile: 250px;
     justify-content: center;
     padding: $margin-sm;
     margin-top: $margin-lg;
+    @include for-tablet-md() {
+      margin-top: 0;
+    }
     img {
       width: auto;
     }
