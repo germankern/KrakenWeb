@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { OurWork } from '../../interfaces';
 import { MainImage } from 'gatsby-plugin-image';
 import './index.scss';
@@ -34,31 +34,6 @@ const OurWorkSection = ({ works }: Props) => {
   );
 };
 
-{
-  /* <div className="width-container">
-          <motion.div className="slider-container" ref={containerRef}>
-            <motion.div
-              className="slider"
-              drag="x"
-              dragElastic={0.5}
-              dragMomentum={true}
-              dragConstraints={{ left: 160, right: maxDrag }}>
-              {works.map((work) => (
-                <a
-                  className="link"
-                  href={work.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  key={work.id}>
-                  <motion.div className="item">
-                    <MainImage src={work.image.url} alt={work.image.description} />
-                  </motion.div>
-                </a>
-              ))}
-            </motion.div>
-          </motion.div>
-        </div> */
-}
 interface Props {
   works: OurWork[];
 }
