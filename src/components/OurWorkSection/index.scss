@@ -2,8 +2,6 @@
 
 $size-img-desktop: 20rem;
 $size-img-mobile: 18rem;
-$margin-rigth-carrousel: 10rem;
-$max-width-carrousel: 1366px;
 
 .container-section {
   display: flex;
@@ -27,18 +25,19 @@ $max-width-carrousel: 1366px;
     flex-direction: column;
     margin: 0 auto;
     padding: $margin-xs;
-    max-width: $max-width-carrousel;
-    overflow-x: hidden;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    max-width: $sizeDesktopLG;
     .slider-container {
       margin: 0 auto;
-      overflow-x: hidden;
+      animation: scrolling 20s linear infinite;
+      -webkit-animation: scrolling 20s linear infinite;
       .slider {
         display: flex;
         position: relative;
-        transform: translateX(-$margin-rigth-carrousel);
-        cursor: grab;
+        overflow: hidden;
         .link {
-          cursor: grab;
           -webkit-user-drag: none;
           pointer-events: auto;
           .item {
@@ -58,5 +57,16 @@ $max-width-carrousel: 1366px;
         }
       }
     }
+  }
+}
+
+@keyframes scrolling {
+  0% {
+    -webkit-transfrom: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transfrom: translateX(-50%);
+    transform: translateX(-50%);
   }
 }
