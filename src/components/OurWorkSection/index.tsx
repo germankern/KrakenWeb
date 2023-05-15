@@ -1,22 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { OurWork } from '../../interfaces';
 import { MainImage } from 'gatsby-plugin-image';
-import { motion } from 'framer-motion';
 import './index.scss';
 import OurWorkImg from '../../assets/images/OurWork.svg';
 
 const OurWorkSection = ({ works }: Props) => {
-  const containerRef = useRef(null);
-  const [maxDrag, setMaxDrag] = useState(0);
-
-  useEffect(() => {
-    if (containerRef.current) {
-      const containerWidth = containerRef.current.offsetWidth;
-
-      setMaxDrag(-containerWidth + 525);
-    }
-  }, [containerRef]);
-
   return (
     <>
       <div className="container-section">
@@ -24,6 +12,30 @@ const OurWorkSection = ({ works }: Props) => {
           <MainImage src={OurWorkImg} alt="our work tittle" />
         </div>
         <div className="width-container">
+          <div className="slider-container">
+            <div className="slider">
+              {[...works, ...works].map((work) => (
+                <a
+                  className="link"
+                  href={work.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  key={work.id}>
+                  <div className="item">
+                    <MainImage src={work.image.url} alt={work.image.description} />
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+{
+  /* <div className="width-container">
           <motion.div className="slider-container" ref={containerRef}>
             <motion.div
               className="slider"
@@ -45,12 +57,8 @@ const OurWorkSection = ({ works }: Props) => {
               ))}
             </motion.div>
           </motion.div>
-        </div>
-      </div>
-    </>
-  );
-};
-
+        </div> */
+}
 interface Props {
   works: OurWork[];
 }
