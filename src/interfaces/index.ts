@@ -21,7 +21,6 @@ export interface StudioHead {
 export interface Service {
   id: string;
   order: number;
-  link: string;
   background: ImageAsset;
   title: string;
   description: string;

@@ -60,7 +60,6 @@ export const pageQuery = graphql`
       nodes {
         id
         order
-        link
         background {
           filename
           url
