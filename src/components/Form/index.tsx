@@ -74,7 +74,7 @@ const Form = () => {
             />
           </div>
           <button className="btn-form" type="submit">
-            Get in ToUch
+            Get in Touch
           </button>
         </form>
       )}

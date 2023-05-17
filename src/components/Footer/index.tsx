@@ -24,7 +24,7 @@ export default function Footer() {
           <MainImage src={Logo} alt="logo-kraken-studio" />
         </div>
         <div className="innerContainerRight">
-          <a href="https://www.gatsbyjs.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/14152864255" target="_blank" rel="noopener noreferrer">
             +1 (415) 286-4255
           </a>
           <a
@@ -40,19 +40,28 @@ export default function Footer() {
               rel="noopener noreferrer">
               <MainImage className="mail" src={Mail} alt="icono de mail" />
             </a>
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.instagram.com/studioskrakencreative/"
+              target="_blank"
+              rel="noopener noreferrer">
               <MainImage src={Instagram} alt="icono de instagram" />
             </a>
-            <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://twitter.com/_krakenstudio" target="_blank" rel="noopener noreferrer">
               <MainImage src={Twitter} alt="icono de twitter" />
             </a>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.facebook.com/krakenverse"
+              target="_blank"
+              rel="noopener noreferrer">
               <MainImage src={Facebook} alt="icono de facebook" />
             </a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/company/81962351/admin/"
+              target="_blank"
+              rel="noopener noreferrer">
               <MainImage src={Linkedin} alt="icono de linkedin" />
             </a>
-            <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/14152864255" target="_blank" rel="noopener noreferrer">
               <MainImage src={WhatsApp} alt="icono de whatsapp" />
             </a>
           </div>
