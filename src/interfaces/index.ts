@@ -15,6 +15,7 @@ export interface StudioHead {
   order: number;
   avatar: ImageAsset;
   trajectory: string;
+  linkedinUrl: string;
 }
 
 export interface Service {
