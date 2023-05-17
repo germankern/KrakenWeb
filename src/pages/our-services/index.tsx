@@ -26,16 +26,14 @@ const OurServicesPage = (props: Props) => {
       <div className="services-container">
         {services.map((service) => (
           <div className="service" key={service.id}>
-            <a href={service.link} target="_blank" rel="noopener noreferrer">
-              <MainImage
-                className="bg-service"
-                src={service.background.url}
-                alt={service.background.description}
-              />
-              <div className="bg-service-overlay" />
-              <h3>{service.title}</h3>
-              <MainImage className="icon-service" src={IconService} alt="icon services" />
-            </a>
+            <MainImage
+              className="bg-service"
+              src={service.background.url}
+              alt={service.background.description}
+            />
+            <div className="bg-service-overlay" />
+            <h3>{service.title}</h3>
+            <MainImage className="icon-service" src={IconService} alt="icon services" />
             <div className="description-service">
               <h4>{service.description}</h4>
             </div>
@@ -62,7 +60,6 @@ export const pageQuery = graphql`
       nodes {
         id
         order
-        link
         background {
           filename
           url

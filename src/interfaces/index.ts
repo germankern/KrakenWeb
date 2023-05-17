@@ -15,12 +15,12 @@ export interface StudioHead {
   order: number;
   avatar: ImageAsset;
   trajectory: string;
+  linkedinUrl: string;
 }
 
 export interface Service {
   id: string;
   order: number;
-  link: string;
   background: ImageAsset;
   title: string;
   description: string;

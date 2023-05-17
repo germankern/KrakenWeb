@@ -31,7 +31,7 @@ const AboutUsPage = (props: Props) => {
               <MainImage src={member.avatar.url} alt={member.avatar.description} />
               <a
                 className="linkedin-icon"
-                href="https://www.linkedin.com/"
+                href={member.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer">
                 <MainImage src={LinkedinMembers} alt="icono de linkedin" />
@@ -74,6 +74,7 @@ export const pageQuery = graphql`
         title
         order
         trajectory
+        linkedinUrl
         avatar {
           url
           filename
