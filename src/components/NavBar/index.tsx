@@ -66,7 +66,6 @@ const NavBar = () => {
           </Link>
           <Link
             to="https://www.artstation.com/krakencreativestudios"
-            target="_blank"
             rel="noopener noreferrer"
             className={isSelected('PORTFOLIO')}
             onClick={handleClick}>
