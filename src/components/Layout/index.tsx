@@ -1,15 +1,23 @@
 import React from 'react';
 import Footer from '../Footer';
 import Header from '../Header';
+import { Helmet } from 'react-helmet';
+import favicon from '../../images/icon.png';
+
 import './index.scss';
 
 export default function Layout({ children }: Props) {
   return (
-    <div className="layout">
-      <Header />
-      <main className="main">{children}</main>
-      <Footer />
-    </div>
+    <>
+      <Helmet>
+        <link rel="icon" type="image/png" href={favicon} />
+      </Helmet>
+      <div className="layout">
+        <Header />
+        <main className="main">{children}</main>
+        <Footer />
+      </div>
+    </>
   );
 }
 interface Props {
