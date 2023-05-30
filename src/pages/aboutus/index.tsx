@@ -8,46 +8,53 @@ import BannerAboutUs from '../../assets/images/BannerAboutUs.png';
 import BannerAboutUsMobile from '../../assets/images/BannerAboutUsMobile.png';
 import LinkedinMembers from '../../assets/images/LinkedinMembers.svg';
 import OurTeamContainer from '../../components/OurTeamContainer';
+import { Helmet } from 'react-helmet';
 
 const AboutUsPage = (props: Props) => {
   const studioHeads: StudioHead[] = get(props, 'data.allContentfulStudioHead.nodes');
   const ourTeam: OurTeam[] = get(props, 'data.allContentfulOurTeam.edges');
+
   return (
-    <div className="about-us">
-      <MainImage
-        className="banner-desktop"
-        src={BannerAboutUs}
-        alt="banner de seccion sobre nosotros"
-      />
-      <MainImage
-        className="banner-mobile"
-        src={BannerAboutUsMobile}
-        alt="banner de seccion sobre nosotros"
-      />
-      <div className="membersContainer">
-        {studioHeads.map((member) => (
-          <div className="member" key={member.id}>
-            <div className="member-img">
-              <MainImage src={member.avatar.url} alt={member.avatar.description} />
-              <a
-                className="linkedin-icon"
-                href={member.linkedinUrl}
-                target="_blank"
-                rel="noopener noreferrer">
-                <MainImage src={LinkedinMembers} alt="icono de linkedin" />
-              </a>
+    <>
+      <Helmet>
+        <title>Art Outsourcing Done Right | Kraken Creative Studios</title>
+      </Helmet>
+      <div className="about-us">
+        <MainImage
+          className="banner-desktop"
+          src={BannerAboutUs}
+          alt="banner de seccion sobre nosotros"
+        />
+        <MainImage
+          className="banner-mobile"
+          src={BannerAboutUsMobile}
+          alt="banner de seccion sobre nosotros"
+        />
+        <div className="membersContainer">
+          {studioHeads.map((member) => (
+            <div className="member" key={member.id}>
+              <div className="member-img">
+                <MainImage src={member.avatar.url} alt={member.avatar.description} />
+                <a
+                  className="linkedin-icon"
+                  href={member.linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <MainImage src={LinkedinMembers} alt="icono de linkedin" />
+                </a>
+              </div>
+              <div className="member-info">
+                <h3>{member.name}</h3>
+                <h4>{member.title}</h4>
+                <h5>{member.trajectory}</h5>
+                <h6>{member.quote}</h6>
+              </div>
             </div>
-            <div className="member-info">
-              <h3>{member.name}</h3>
-              <h4>{member.title}</h4>
-              <h5>{member.trajectory}</h5>
-              <h6>{member.quote}</h6>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <OurTeamContainer ourTeam={ourTeam} />
       </div>
-      <OurTeamContainer ourTeam={ourTeam} />
-    </div>
+    </>
   );
 };
 

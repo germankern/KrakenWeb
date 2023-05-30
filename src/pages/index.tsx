@@ -9,6 +9,7 @@ import './index.scss';
 import WorkWithSection from '../components/WorkWithSection';
 import HomeAboutUs from '../components/HomeAboutUs';
 import InternalProjectContainer from '../components/InternalProjectContainer';
+import { Helmet } from 'react-helmet';
 
 const HomePage = (props: Props) => {
   const works: OurWork[] = get(props, 'data.allContentfulOurWork.nodes');
@@ -20,13 +21,18 @@ const HomePage = (props: Props) => {
   );
 
   return (
-    <div className="home-container">
-      <HeroSection />
-      <WorkWithSection companies={companies} />;
-      <HomeAboutUs aboutHome={aboutHome} />
-      <OurWorkSection works={works} />;
-      <InternalProjectContainer internalProject={internalProject} />
-    </div>
+    <>
+      <Helmet>
+        <title>Game Art Outsourcing Veterans | Kraken Creative Studios</title>
+      </Helmet>
+      <div className="home-container">
+        <HeroSection />
+        <WorkWithSection companies={companies} />;
+        <HomeAboutUs aboutHome={aboutHome} />
+        <OurWorkSection works={works} />;
+        <InternalProjectContainer internalProject={internalProject} />
+      </div>
+    </>
   );
 };
 

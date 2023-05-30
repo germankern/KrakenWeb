@@ -55,10 +55,10 @@ const NavBar = () => {
     <>
       <nav className="navbar" style={navbarStyle}>
         <div className="containerNavbar">
-          <Link to="/about-us" className={isSelected('ABOUT US')} onClick={handleClick}>
+          <Link to="/aboutus" className={isSelected('ABOUT US')} onClick={handleClick}>
             ABOUT US
           </Link>
-          <Link to="/our-services" className={isSelected('OUR SERVICES')} onClick={handleClick}>
+          <Link to="/ourservices" className={isSelected('OUR SERVICES')} onClick={handleClick}>
             OUR SERVICES
           </Link>
           <Link to="/" className={isSelected('/')} onClick={handleClick}>
@@ -72,13 +72,13 @@ const NavBar = () => {
             PORTFOLIO
           </Link>
           <Link
-            to="/project-gothika"
+            to="/projectgothika"
             className={isSelected('PROJECT GOTHIKA')}
             onClick={handleClick}>
             PROJECT GOTHIKA
           </Link>
         </div>
-        <Link to="/contact-us" className="containerBtnContactUs" onClick={handleClick}>
+        <Link to="/contactus" className="containerBtnContactUs" onClick={handleClick}>
           <button className="btnContactUs">Contact Us</button>
         </Link>
         <div className="hamburguer">
