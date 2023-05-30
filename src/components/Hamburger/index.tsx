@@ -29,10 +29,10 @@ const Hamburger = () => {
           />
         </div>
         <div className={`containerLinksHidden ${showHamburger ? 'show' : ''}`}>
-          <Link to="/about-us" onClick={toggleLinks}>
+          <Link to="/aboutus" onClick={toggleLinks}>
             ABOUT US
           </Link>
-          <Link to="/our-services" onClick={toggleLinks}>
+          <Link to="/ourservices" onClick={toggleLinks}>
             OUR SERVICES
           </Link>
           <Link
@@ -41,10 +41,10 @@ const Hamburger = () => {
             onClick={toggleLinks}>
             PORTFOLIO
           </Link>
-          <Link to="/project-gothika" onClick={toggleLinks}>
+          <Link to="/projectgothika" onClick={toggleLinks}>
             PROJECT GOTHIKA
           </Link>
-          <Link to="/contact-us" onClick={toggleLinks}>
+          <Link to="/contactus" onClick={toggleLinks}>
             Contact Us
           </Link>
         </div>
