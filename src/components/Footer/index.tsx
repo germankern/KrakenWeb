@@ -18,7 +18,9 @@ export default function Footer() {
           <Link to="/">Privacy Policy</Link>
           <Link to="/">Terms Of Use</Link>
           <Link to="/">Undead Sea Fruits</Link>
-          <Link to="/">Octosoft Partners</Link>
+          <Link to="https://www.octosoftpartners.com/" target="_blank" rel="noopener noreferrer">
+            Octosoft Partners
+          </Link>
         </div>
         <div className="innerContainerCenter">
           <MainImage src={Logo} alt="logo-kraken-studio" />
