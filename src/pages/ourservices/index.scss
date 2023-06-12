@@ -104,6 +104,9 @@ $line-height-desktop: 30px;
         width: $size-icon-services;
         height: auto;
         z-index: 12;
+        @include for-tablet-md() {
+          display: none;
+        }
       }
       .description-service {
         position: absolute;
